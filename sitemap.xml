@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- ========================================
+       MAIN HOME PAGE - Crisis Reporting
+       ======================================== -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/index.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- ========================================
+       MAIN RESOURCE PAGES (High Priority)
+       ======================================== -->
+  
+  <!-- Verification & Fact-Checking -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/verification</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/verification.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- Risk Communication -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/risk-communication</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/risk-communication.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- Data & Maps -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/data-maps</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/data-maps.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- Safety & Well-Being -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/safety</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/safety.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- Training & Education -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/training</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/training.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- Digital Tools Hub -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- For Influencers -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/influencers</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/influencers.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- For Citizens -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/citizens</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/citizens.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <!-- ========================================
+       TOOL CATEGORY PAGES (168+ Tools)
+       ======================================== -->
+  
+  <!-- AI Tools for Journalists -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/ai-tools</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/ai-tools.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Verification & Fact-Checking Tools -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/verification-tools</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/verification-tools.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Data & Maps Tools -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/data-maps-tools</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/data-maps-tools.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Safety & Security Tools -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/safety-tools</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/safety-tools.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Communication Tools -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/communication-tools</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/communication-tools.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- Learning Resources & Documentation -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/learning-resources</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/tools/learning-resources.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- ========================================
+       INFORMATION & CONTACT PAGES
+       ======================================== -->
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/about</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/about.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/contact</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/contact.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- ========================================
+       API & BACKEND ENDPOINTS
+       ======================================== -->
+  
+  <!-- News Feed API -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/api/news.php</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <!-- Contact Form API -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/api/contact.php</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  
+  <!-- ========================================
+       ADMIN PANEL (Restricted Access)
+       ======================================== -->
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/admin</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  
+  <url>
+    <loc>https://ssccr.uoscloud.org/admin/index.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  
+  <!-- ========================================
+       ASSETS & RESOURCES
+       ======================================== -->
+  
+  <!-- Sitemap itself -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/sitemap.xml</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.40</priority>
+  </url>
+  
+  <!-- Robots.txt -->
+  <url>
+    <loc>https://ssccr.uoscloud.org/robots.txt</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+  </url>
+  
+</urlset>

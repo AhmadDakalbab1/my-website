@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Toolkit for Disaster Reporting</title>
+    <meta name="description" content="Professional bilingual resource directory for journalists covering disasters" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    
+    <!-- Bilingual Content System - Professional Alternative to Google Translate -->
+    <script type="text/javascript">
+      // Manual Bilingual Translation System
+      window.translateToArabic = function() {
+        console.log('Switching to Arabic...');
+        
+        // Set RTL direction
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+        document.documentElement.classList.add('lang-ar');
+        document.documentElement.classList.remove('lang-en');
+        
+        // Store language preference
+        localStorage.setItem('preferred-language', 'ar');
+        
+        console.log('Arabic mode activated!');
+      };
+
+      window.translateToEnglish = function() {
+        console.log('Switching to English...');
+        
+        // Set LTR direction
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', 'en');
+        document.documentElement.classList.add('lang-en');
+        document.documentElement.classList.remove('lang-ar');
+        
+        // Store language preference
+        localStorage.setItem('preferred-language', 'en');
+        
+        console.log('English mode activated!');
+      };
+      
+      // Load saved language preference on page load
+      window.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('preferred-language');
+        if (savedLang === 'ar') {
+          document.documentElement.setAttribute('dir', 'rtl');
+          document.documentElement.setAttribute('lang', 'ar');
+          document.documentElement.classList.add('lang-ar');
+        } else {
+          document.documentElement.classList.add('lang-en');
+        }
+      });
+    </script>
+    
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>

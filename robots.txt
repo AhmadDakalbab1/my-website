@@ -1,0 +1,93 @@
+# ================================================
+# ROBOTS.TXT - Media Toolkit for Disaster Reporting
+# Website: https://ssccr.uoscloud.org
+# ================================================
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Crawl Delay (polite to servers)
+Crawl-delay: 1
+
+# ================================================
+# SITEMAP LOCATION
+# ================================================
+Sitemap: https://ssccr.uoscloud.org/sitemap.xml
+
+# ================================================
+# DISALLOW ADMIN & PRIVATE AREAS (Security)
+# ================================================
+User-agent: *
+Disallow: /admin/
+Disallow: /api/config/
+Disallow: /api/includes/
+Disallow: /.env
+Disallow: /config/
+
+# ================================================
+# BLOCK BAD BOTS (Security)
+# ================================================
+
+# Block spam bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ================================================
+# ALLOW GOOD SEARCH ENGINES (Explicitly)
+# ================================================
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex (Russian search engine)
+User-agent: Yandex
+Allow: /
+
+# Baidu (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+
+# ================================================
+# ADDITIONAL SETTINGS
+# ================================================
+
+# Allow crawling of images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+
+# Allow crawling of CSS and JavaScript
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+
+# ================================================
+# END OF ROBOTS.TXT
+# ================================================
+
