@@ -714,12 +714,12 @@ SOFTWARE.
 ## 👤 Contact
 
 **Your Name**  
-📧 Email: [u18103921@sharjah.ac.ae](mailto:u18103921@sharjah.ac.ae)  
+📧 Email: [ahmaddakalbab9@gmail.com](mailto:ahmaddakalbab9@gmail.com)  
 🔗 LinkedIn: [Your LinkedIn Profile](#)  
-🐙 GitHub: [@yourusername](https://github.com/yourusername)  
-🌐 Portfolio: [yourwebsite.com](#)
+🐙 GitHub: [@AhmadDakalbab1](https://github.com/AhmadDakalbab1)  
+🌐 Portfolio: [https://ssccr.uoscloud.org/](#)
 
-**Project Link:** [https://github.com/yourusername/media-toolkit-disaster-reporting](https://github.com/yourusername/media-toolkit-disaster-reporting)
+**Project Link:** [https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting](https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting)
 
 ---
 
