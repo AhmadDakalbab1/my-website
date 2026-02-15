@@ -1,359 +1,468 @@
-# 🌍 Media Toolkit for Disaster Reporting
+# Media Toolkit for Disaster Reporting
 
 <div align="center">
 
 ![Project Status](https://img.shields.io/badge/status-active-success.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![PHP](https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
 
 **A comprehensive bilingual platform empowering journalists, influencers, and citizens with verified tools and resources for effective disaster and crisis reporting.**
 
-[🌐 Live Demo](#) | [📖 Documentation](./docs/) | [🐛 Report Bug](#) | [✨ Request Feature](#)
+[Live Demo](#) • [Documentation](./docs/) • [Report Bug](https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting/issues) • [Request Feature](https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting/issues)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [About The Project](#-about-the-project)
-- [Key Features](#-key-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Usage Guide](#-usage-guide)
-- [API Documentation](#-api-documentation)
-- [Database Schema](#-database-schema)
-- [Documentation](#-documentation)
-- [Deployment](#-deployment)
-- [Contributing](#-contributing)
-- [Roadmap](#-roadmap)
-- [License](#-license)
-- [Contact](#-contact)
-- [Acknowledgments](#-acknowledgments)
-
----
-
-## 🎯 About The Project
-
-The **Media Toolkit for Disaster Reporting** is a professional, full-stack web application designed to serve as a comprehensive resource directory for journalists, influencers, and citizens covering disasters and humanitarian crises. Built with modern web technologies and a focus on accessibility, the platform provides curated tools, real-time news aggregation, and expert resources in both English and Arabic.
-
-### 🎓 Academic Context
-
-This project was developed as part of academic requirements at the University of Sharjah, with guidance from Prof. Qassim, focusing on:
-- Professional web development practices
-- Full-stack development skills
-- DevOps principles and deployment
-- Real-world application of modern frameworks
-- Comprehensive technical documentation
-
-### 🌟 Project Highlights
-
-- **27 fully functional pages** organized into 13 main sections
-- **368+ verified tools** across multiple categories
-- **Real-time news aggregation** from 7 trusted humanitarian sources
-- **Bilingual interface** (English/Arabic) with full RTL support
-- **AI-powered chatbot** for user assistance
-- **Full-stack implementation** with React frontend and PHP/MySQL backend
-- **Admin panel** for content management
-- **Production-ready** with SEO optimization
+- [About The Project](#about-the-project)
+- [Technical Overview](#technical-overview)
+- [Key Features](#key-features)
+- [Technology Stack](#technology-stack)
+- [Architecture](#architecture)
+- [Getting Started](#getting-started)
+- [Installation Guide](#installation-guide)
+- [API Documentation](#api-documentation)
+- [Database Schema](#database-schema)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Deployment](#deployment)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [Roadmap](#roadmap)
+- [Skills Demonstrated](#skills-demonstrated)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
-## ✨ Key Features
+## About The Project
 
-### 🌐 Core Functionality
+The **Media Toolkit for Disaster Reporting** is a production-grade, full-stack web application designed to serve as a comprehensive resource directory for journalists, influencers, and citizens covering disasters and humanitarian crises. The platform addresses the critical need for verified, accessible, and culturally-appropriate information during crisis situations.
 
-#### 1. **Comprehensive Resource Directory**
-- 📰 **Crisis Reporting** - Guidelines and best practices
-- ⚡ **Breaking News Tools** - Real-time verification resources
-- ✅ **Verification & Fact-Checking** - 6 specialized sub-sections
+### Project Scope
+
+This enterprise-level application features:
+- 🌐 **27 fully responsive pages** organized into 13 thematic sections
+- 🛠️ **368+ verified tools and resources** across multiple categories
+- 📡 **Real-time news aggregation** from 7 trusted humanitarian organizations
+- 🗣️ **Bilingual interface** (English/Arabic) with complete RTL support
+- ⚙️ **Full-stack architecture** with React frontend and PHP/MySQL backend
+- 🤖 **AI-powered assistance** through integrated chatbot
+- 👨‍💼 **Admin content management system** with review workflow
+- 🚀 **Production-ready deployment** with comprehensive SEO optimization
+
+### Academic Context
+
+Developed as part of academic requirements at the **University of Sharjah** under the supervision of **Prof. Qassim**, this project demonstrates:
+- 💻 Professional software engineering practices
+- 🔧 Full-stack development expertise
+- 🔄 DevOps principles and methodologies
+- 🏗️ Real-world application architecture
+- 📚 Comprehensive technical documentation
+- 🔒 Security-first development approach
+
+### Business Value
+
+This platform solves real-world challenges by:
+- 📌 **Centralizing** scattered disaster reporting resources
+- ⚡ **Reducing** information verification time for journalists
+- ✅ **Improving** accuracy through fact-checking tool integration
+- 🌍 **Democratizing** access to professional reporting tools
+- 🗨️ **Supporting** multilingual crisis communication
+- 🤝 **Enabling** community-driven content contribution
+
+---
+
+## Technical Overview
+
+### System Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    Client Layer                          │
+│  React 18 + TypeScript + Tailwind CSS + i18next         │
+│  (27 Pages, 60+ Components, Wouter Routing)             │
+└─────────────────────┬───────────────────────────────────┘
+                      │
+                      ├──────── HTTP/HTTPS ────────┐
+                      │                             │
+┌─────────────────────▼───────────────┐   ┌────────▼────────────┐
+│     Application Layer (PHP)         │   │   External APIs     │
+│  ├─ RESTful Endpoints               │   │  ├─ ReliefWeb API  │
+│  ├─ Request Validation              │   │  ├─ IFRC GO API    │
+│  ├─ Business Logic                  │   │  └─ RSS Feeds (5)  │
+│  └─ Email Service (PHPMailer)       │   └────────────────────┘
+└─────────────────────┬───────────────┘
+                      │
+                      ├──── mysqli (Prepared Statements) ────
+                      │
+┌─────────────────────▼───────────────┐
+│      Data Layer (MySQL)             │
+│  ├─ resource_submissions            │
+│  ├─ admin_users                     │
+│  ├─ Indexes for Performance         │
+│  └─ Automated Timestamps            │
+└─────────────────────────────────────┘
+```
+
+### Design Patterns Implemented
+
+- **Component-Based Architecture** - Modular, reusable React components
+- **Repository Pattern** - Data access abstraction in backend
+- **MVC Separation** - Clear separation of concerns
+- **Singleton Pattern** - Database connection management
+- **Factory Pattern** - Component creation and rendering
+- **Observer Pattern** - State management and updates
+- **Strategy Pattern** - Multi-source news aggregation
+
+### Performance Optimizations
+
+- **Code Splitting** - Lazy loading with React.lazy()
+- **Asset Optimization** - Vite-based bundling and minification
+- **Database Indexing** - Strategic indexes on frequently queried columns
+- **Caching Strategy** - LocalStorage for language preferences
+- **CDN Integration** - Static asset delivery optimization
+- **Responsive Images** - Smart placeholder system for news feeds
+
+---
+
+## Key Features
+
+### 1. Comprehensive Resource Directory
+
+**13 Main Sections:**
+- Crisis Reporting - Professional guidelines and best practices
+- Breaking News Tools - Real-time verification resources
+- Verification & Fact-Checking - 6 specialized sub-sections
   - Image Verification
   - Video Analysis
   - Geolocation Tools
   - Account Verification
   - Fact-Check Databases
   - AI Detection Tools
-- 🗺️ **Data & Maps** - Interactive crisis mapping resources
-- 🛡️ **Safety & Well-Being** - Journalist safety protocols
-- 📚 **Training Resources** - Professional development materials
-- 💬 **Risk Communication** - Crisis communication strategies
-- 🎯 **For Influencers** - Social media responsibility guidelines
-- 👥 **For Citizens** - Community reporting tools
+- Data & Maps - Interactive crisis mapping resources
+- Safety & Well-Being - Journalist safety protocols
+- Training Resources - Professional development materials
+- Risk Communication - Crisis communication strategies
+- Digital Tools - 368+ tools across 6 categories
+- For Influencers - Social media responsibility guidelines
+- For Citizens - Community reporting tools
+- About & Submit - Platform information and contribution system
 
-#### 2. **Digital Tools Library (368+ Tools)**
-- 🤖 **AI Writing Assistants**
-- ⚙️ **Automation & Productivity**
-- 🎨 **Media Creation Tools**
-- 🔍 **Research & Discovery**
-- 🔧 **Technical Tools**
-- 🔐 **Verification & Safety Tools**
+### 2. Real-Time News Aggregation System
 
-#### 3. **Dynamic News Aggregation**
-Real-time humanitarian news from trusted sources:
-- 🌐 **UN OCHA ReliefWeb** (API)
-- 🏥 **WHO** (RSS)
-- 🔴 **IFRC / Red Cross** (GO API)
-- 👶 **UNICEF** (RSS)
-- 🏕️ **UNHCR** (RSS)
-- 🍽️ **WFP** (RSS)
-- 🏥 **MSF Doctors Without Borders** (RSS)
+**Multi-Source Integration:**
+- UN OCHA ReliefWeb (REST API)
+- World Health Organization (RSS)
+- International Federation of Red Cross (GO API)
+- UNICEF (RSS)
+- UNHCR (RSS)
+- World Food Programme (RSS)
+- Médecins Sans Frontières (RSS)
 
 **Advanced Features:**
-- Automatic content normalization
-- Proxy-based CORS handling
-- Smart image placeholder system
-- Optional content translation
-- Category-based filtering
-- Source attribution
+- Unified data normalization across disparate sources
+- Proxy-based CORS handling for cross-origin requests
+- Intelligent image placeholder system
+- Source attribution and categorization
+- Optional content translation capabilities
+- Error handling and fallback mechanisms
+- Caching and performance optimization
 
-#### 4. **Bilingual Experience (EN/AR)**
-- 🌍 Complete i18next integration
-- ↔️ RTL/LTR automatic switching
-- 💾 Persistent language preference (localStorage)
-- 🎨 Culturally appropriate design
-- 📝 Professional translations (verified with multiple plugins)
+### 3. Bilingual Architecture (EN/AR)
 
-#### 5. **User Submission System**
-Full-stack resource submission workflow:
-- 📝 Comprehensive submission form with validation
-- 🔐 Server-side PHP processing with prepared statements
-- 💾 MySQL database with status tracking (pending/approved/rejected)
-- 📧 Automated email notifications to admin
-- 🎛️ Admin panel for reviewing submissions
-- 📊 Statistics and filtering capabilities
+**Internationalization Infrastructure:**
+- i18next framework with react-i18next bindings
+- Complete translation coverage across all pages
+- Dynamic RTL/LTR layout switching
+- Persistent language preference (localStorage)
+- Professional translations verified with multiple tools
+- Culturally-appropriate design adaptations
+- SEO optimization for both languages
 
-#### 6. **AI Support Chatbot**
-- 🤖 Open-source AI-powered assistance
-- 💬 Context-aware responses
-- 🌐 Bilingual support
+### 4. Full-Stack Submission System
+
+**Frontend:**
+- Comprehensive validation (email, URL, required fields)
+- Real-time user feedback
+- Accessible form design
+- Loading states and error handling
+
+**Backend (PHP):**
+- RESTful API endpoint (`POST /api/submit-resource.php`)
+- Server-side validation and sanitization
+- SQL injection prevention (prepared statements)
+- XSS protection
+- Automated email notifications
+- Error logging and monitoring
+
+**Database:**
+- Structured schema with proper indexing
+- Status workflow (pending → approved/rejected)
+- Automated timestamps
+- Admin user management
+
+**Admin Panel:**
+- Submission review interface
+- Filtering and search capabilities
+- Status management
+- Analytics and statistics
+
+### 5. AI-Powered Chatbot
+
+- 🤖 Open-source AI integration
+- 🧠 Context-aware responses
+- 🗣️ Bilingual conversation support
+- 💾 Persistent chat history
 - 📱 Responsive chat interface
+- ⚡ Real-time assistance
 
-#### 7. **Search & Navigation**
-- 🔍 Advanced search with resource indexing
-- 🏷️ Category-based filtering
-- 📍 Breadcrumb navigation
-- ⬆️ Back-to-top functionality
+### 6. Advanced Search & Navigation
+
+**Search System:**
+- 📑 Resource indexing and categorization
+- 🔍 Fuzzy search algorithm
 - 🔗 Internal and external resource linking
+- 🏷️ Category-based filtering
+- ⚡ Real-time results
 
-#### 8. **UI/UX Components**
-- 🎨 60+ reusable UI components
-- 📱 Fully responsive design
-- ♿ Accessibility-focused
-- 🎭 Consistent design system with Tailwind CSS
-- 🚨 Emergency banner system
-- 💡 Expert voices section
+**Navigation Features:**
+- 🍞 Breadcrumb trail system
+- ⬆️ Back-to-top functionality
+- 📱 Mobile-responsive menu
+- 🌐 Language switcher
 - 🎯 Quick access shortcuts
-- 🏷️ Dynamic page type badges
+
+### 7. UI Component Library
+
+**60+ Reusable Components:**
+- 🧭 Navigation and Footer
+- 🎴 Resource Cards
+- 🏷️ Dynamic Badges
+- 🚨 Emergency Banners
+- 👨‍🏫 Expert Voices Section
+- ⏳ Loading Skeletons
+- 🪟 Modal Dialogs
+- 📝 Form Controls
+- 📊 Responsive Tables
+- ✨ And more...
+
+**Design System:**
+- 🎨 Consistent Tailwind CSS styling
+- ♿ Accessibility standards (WCAG 2.1)
+- 📱 Mobile-first responsive design
+- 🌙 Dark mode compatible structure
+- 🌐 Cross-browser compatibility
 
 ---
 
-## 🛠️ Tech Stack
+## Technology Stack
 
-### **Frontend**
-```
-⚛️  React 18             - UI framework
-📘 TypeScript           - Type-safe development
-⚡ Vite                 - Build tool and dev server
-🎨 Tailwind CSS         - Utility-first styling
-🌐 i18next              - Internationalization
-   react-i18next        - React bindings for i18n
-🔀 Wouter               - Lightweight routing (26+ routes)
-```
+### Frontend Technologies
 
-### **Backend**
-```
-🐘 PHP                  - Server-side processing
-🗄️  MySQL                - Relational database
-📧 PHPMailer            - Email notifications
-🔐 mysqli               - Database connectivity with prepared statements
-```
+| Technology | Purpose | Version |
+|-----------|---------|---------|
+| **React** | UI Framework | 18.x |
+| **TypeScript** | Type Safety & Developer Experience | 5.x |
+| **Vite** | Build Tool & Dev Server | 5.x |
+| **Tailwind CSS** | Utility-First Styling | 3.x |
+| **i18next** | Internationalization Framework | 23.x |
+| **react-i18next** | React Bindings for i18n | 14.x |
+| **Wouter** | Lightweight Routing | 3.x |
+| **Lucide React** | Icon Library | Latest |
+| **Recharts** | Data Visualization | 2.x |
+| **Framer Motion** | Animation Library | 11.x |
 
-### **Tools & Libraries**
-```
-🎯 Lucide React         - Icon system
-📊 Recharts             - Data visualization
-🎠 React Slick          - Carousels
-🖼️  React Responsive    - Masonry grids
-   Masonry
-🎭 Framer Motion        - Animations
-🤖 Custom AI Chatbot    - User assistance
-```
+### Backend Technologies
 
-### **Development & Deployment**
-```
-📦 npm/pnpm             - Package management
-🖥️  WAMP/XAMPP          - Local development server
-🔍 ESLint               - Code linting
-🎨 Prettier             - Code formatting
-📝 Git/GitHub           - Version control
-🌐 SEO Ready            - Sitemap, robots.txt
-```
+| Technology | Purpose | Version |
+|-----------|---------|---------|
+| **PHP** | Server-Side Language | 8.x |
+| **MySQL** | Relational Database | 8.x |
+| **mysqli** | Database Driver | Built-in |
+| **PHPMailer** | Email Service | 6.x |
+
+### Development Tools
+
+| Tool | Purpose |
+|------|---------|
+| **Git** | Version Control |
+| **ESLint** | Code Linting |
+| **Prettier** | Code Formatting |
+| **WAMP/XAMPP** | Local Development Server |
+| **phpMyAdmin** | Database Administration |
+| **Postman** | API Testing |
+| **VSCode** | Code Editor |
+
+### Production Tools
+
+| Tool | Purpose |
+|------|---------|
+| **Netlify/Vercel** | Frontend Hosting |
+| **SSL/TLS** | Security Certificates |
+| **Google Analytics** | Usage Analytics |
+| **Sitemap/Robots.txt** | SEO Optimization |
 
 ---
 
-## 📁 Project Structure
+## Architecture
+
+### Frontend Architecture
 
 ```
-media-toolkit/
-│
-├── 📂 src/
-│   ├── 📂 components/           # Reusable React components
-│   │   ├── 📂 ui/              # UI primitives (60+ components)
-│   │   ├── Navigation.tsx      # Main navigation with language switcher
-│   │   ├── Footer.tsx          # Site footer
-│   │   ├── Breadcrumbs.tsx     # Navigation breadcrumbs
-│   │   ├── SearchBar.tsx       # Advanced search component
-│   │   ├── ResourceCard.tsx    # Tool/resource display card
-│   │   ├── DynamicNewsFeed.tsx # Multi-source news aggregator
-│   │   ├── EmergencyBanner.tsx # Alert system
-│   │   ├── ExpertVoices.tsx    # Expert content section
-│   │   ├── BackToTop.tsx       # Scroll-to-top button
-│   │   ├── PageTypeBadge.tsx   # Dynamic/Static indicator
-│   │   └── BilingualText.tsx   # i18n text wrapper
-│   │
-│   ├── 📂 pages/               # 27 main pages
-│   │   ├── HomePage.tsx
-│   │   ├── CrisisReporting.tsx
-│   │   ├── BreakingNews.tsx
-│   │   ├── Verification.tsx
-│   │   ├── Tools.tsx
-│   │   ├── DataMaps.tsx
-│   │   ├── Safety.tsx
-│   │   ├── Training.tsx
-│   │   ├── RiskCommunication.tsx
-│   │   ├── Influencers.tsx
-│   │   ├── Citizens.tsx
-│   │   ├── About.tsx
-│   │   ├── SubmitPage.tsx
-│   │   │
-│   │   ├── 📂 Verification-Tools/  # 6 specialized pages
-│   │   │   ├── ImageVerification.tsx
-│   │   │   ├── VideoAnalysis.tsx
-│   │   │   ├── Geolocation.tsx
-│   │   │   ├── AccountVerification.tsx
-│   │   │   ├── FactCheckDatabases.tsx
-│   │   │   └── AIDetection.tsx
-│   │   │
-│   │   └── 📂 Digital-Tools/       # 6 tool categories
-│   │       ├── AIWriting.tsx
-│   │       ├── Automation.tsx
-│   │       ├── MediaCreation.tsx
-│   │       ├── Research.tsx
-│   │       ├── TechnicalTools.tsx
-│   │       └── VerificationSafety.tsx
-│   │
-│   ├── 📂 locales/             # Internationalization
-│   │   ├── en.ts              # English translations
-│   │   └── ar.ts              # Arabic translations
-│   │
-│   ├── 📂 styles/
-│   │   └── globals.css        # Global styles & Tailwind config
-│   │
-│   ├── App.tsx                # Main app with routing (26+ routes)
-│   ├── main.tsx               # React entry point
-│   ├── i18n.ts                # i18next configuration
-│   └── vite-env.d.ts          # TypeScript definitions
-│
-├── 📂 api/                     # PHP Backend
-│   ├── submit-resource.php    # Form submission handler
-│   ├── view-submissions.php   # Admin panel
-│   ├── test-connection.php    # DB connection test
-│   ├── test-database.php      # Database test
-│   └── test-form.html         # Form testing utility
-│
-├── 📂 database/
-│   └── setup.sql              # Database schema & seed data
-│       ├── Tables: resource_submissions, admin_users
-│       ├── Indexes for performance
-│       └── Admin user seed
-│
-├── 📂 docs/                    # Comprehensive documentation
-│   ├── 01-php-restful-apis.md
-│   ├── 02-mysql-database-connections.md
-│   ├── 03-user-authentication-systems.md
-│   ├── 04-sql-for-beginners.md
-│   ├── 05-git-github-basics.md
-│   ├── 06-deployment-guide.md
-│   └── 07-full-stack-interview-prep.md
-│
-├── 📂 wamp-deploy/             # Deployment configuration
-├── 📂 wamp-export/             # Export utilities
-│
-├── 📄 index.html              # HTML entry point
-├── 📄 robots.txt              # SEO - Search engine directives
-├── 📄 sitemap.xml             # SEO - Site structure
-├── 📄 package.json            # Dependencies
-├── 📄 tsconfig.json           # TypeScript configuration
-├── 📄 vite.config.ts          # Vite configuration
-├── 📄 tailwind.config.js      # Tailwind CSS configuration
-└── 📄 README.md               # This file
+src/
+├── components/              # Reusable UI Components
+│   ├── ui/                 # Primitive Components (60+)
+│   ├── Navigation.tsx      # Main Navigation
+│   ├── Footer.tsx          # Site Footer
+│   ├── SearchBar.tsx       # Search Functionality
+│   ├── DynamicNewsFeed.tsx # News Aggregator
+│   └── ...
+├── pages/                  # Route Components (27)
+│   ├── HomePage.tsx
+│   ├── Verification-Tools/ # Sub-section (6 pages)
+│   ├── Digital-Tools/      # Sub-section (6 pages)
+│   └── ...
+├── locales/                # Translations
+│   ├── en.ts              # English
+│   └── ar.ts              # Arabic
+├── styles/
+│   └── globals.css        # Global Styles
+├── App.tsx                # Main Application
+├── main.tsx               # Entry Point
+└── i18n.ts                # i18n Configuration
+```
+
+### Backend Architecture
+
+```
+api/
+├── submit-resource.php     # Main Submission Endpoint
+├── view-submissions.php    # Admin Panel
+├── config.php             # Database Configuration
+├── test-connection.php    # Connection Testing
+└── test-database.php      # Database Testing
+
+database/
+└── setup.sql              # Schema & Seed Data
+```
+
+### Data Flow
+
+```
+User Input → Validation → React State → API Call → PHP Processing → 
+Database → Email Notification → Response → UI Update
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
-
-- **Node.js** (v16.x or higher) - [Download](https://nodejs.org/)
-- **npm** or **pnpm** - Comes with Node.js
-- **WAMP/XAMPP** or similar local server - [WAMP](https://www.wampserver.com/) | [XAMPP](https://www.apachefriends.org/)
-- **Git** - [Download](https://git-scm.com/)
-
-### Installation
-
-#### 1️⃣ Clone the Repository
+Ensure the following software is installed on your system:
 
 ```bash
-git clone https://github.com/yourusername/media-toolkit-disaster-reporting.git
+Node.js (v16.x or higher)
+npm or pnpm (latest version)
+WAMP/XAMPP (latest version)
+Git (latest version)
+Modern web browser (Chrome, Firefox, Safari, Edge)
+```
+
+### System Requirements
+
+- **Operating System:** Windows 10/11, macOS 10.15+, or Linux
+- **RAM:** Minimum 4GB (8GB recommended)
+- **Disk Space:** 500MB for dependencies and build files
+- **Network:** Internet connection for package installation and API calls
+
+---
+
+## Installation Guide
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting.git
 cd media-toolkit-disaster-reporting
 ```
 
-#### 2️⃣ Install Frontend Dependencies
+### Step 2: Install Frontend Dependencies
 
 ```bash
+# Using npm
 npm install
-# or
+
+# Or using pnpm (recommended for faster installation)
 pnpm install
 ```
 
-#### 3️⃣ Set Up the Database
+### Step 3: Database Setup
 
 1. Start your WAMP/XAMPP server
-2. Open phpMyAdmin (usually at `http://localhost/phpmyadmin`)
-3. Create a new database named `media_toolkit`
-4. Import the database schema:
+2. Open phpMyAdmin at `http://localhost/phpmyadmin`
+3. Create a new database:
    ```sql
-   -- Run the SQL file
-   source database/setup.sql
+   CREATE DATABASE media_toolkit CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
    ```
-   Or import via phpMyAdmin interface
+4. Import the schema:
+   - Click on the `media_toolkit` database
+   - Go to "Import" tab
+   - Select `database/setup.sql`
+   - Click "Go"
 
-#### 4️⃣ Configure Backend
+**Alternative (Command Line):**
+```bash
+mysql -u root -p
+CREATE DATABASE media_toolkit;
+USE media_toolkit;
+SOURCE database/setup.sql;
+EXIT;
+```
 
-1. Update database credentials in `api/submit-resource.php`:
-   ```php
-   $host = 'localhost';
-   $username = 'root';
-   $password = '';  // Your MySQL password
-   $database = 'media_toolkit';
-   ```
+### Step 4: Backend Configuration
 
-2. Update email configuration:
-   ```php
-   $admin_email = "your-email@example.com";
-   ```
+Create `api/config.php`:
 
-#### 5️⃣ Test Database Connection
+```php
+<?php
+// Database Configuration
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', ''); // Your MySQL password
+define('DB_NAME', 'media_toolkit');
 
-Visit: `http://localhost/your-project/api/test-connection.php`
+// Email Configuration
+define('ADMIN_EMAIL', 'u18103921@sharjah.ac.ae');
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_PORT', 587);
 
-You should see: "✅ Connection successful!"
+// Application Settings
+define('APP_ENV', 'development'); // 'production' for live
+define('DEBUG_MODE', true);
+?>
+```
 
-#### 6️⃣ Start Development Server
+### Step 5: Test Database Connection
+
+Visit: `http://localhost/media-toolkit-disaster-reporting/api/test-connection.php`
+
+Expected output:
+```
+✅ Database connection successful!
+✅ Tables verified: resource_submissions, admin_users
+```
+
+### Step 6: Start Development Server
 
 ```bash
 npm run dev
@@ -361,53 +470,19 @@ npm run dev
 pnpm dev
 ```
 
-The application will open at `http://localhost:5173`
+The application will be available at: `http://localhost:5173`
+
+### Step 7: Verify Installation
+
+1. 🌐 Open `http://localhost:5173` in your browser
+2. 🔄 Test language switching (EN ↔ AR)
+3. 🧭 Navigate through different pages
+4. 📝 Submit a test resource
+5. 👨‍💼 Check admin panel at `http://localhost/media-toolkit-disaster-reporting/api/view-submissions.php`
 
 ---
 
-## 📖 Usage Guide
-
-### For End Users
-
-#### Browsing Resources
-1. Navigate through the main sections using the top navigation menu
-2. Use the search bar to find specific tools or resources
-3. Toggle between English and Arabic using the language switcher
-4. Access the news feed for real-time humanitarian updates
-
-#### Submitting a Resource
-1. Click **"Submit a Resource"** in the navigation
-2. Fill out the comprehensive form:
-   - Personal information (name, email, organization, country)
-   - Resource details (type, name, URL)
-   - Description and relevant tags
-   - Accept the terms and conditions
-3. Submit for admin review
-4. You'll receive confirmation via email
-
-#### Using the AI Chatbot
-1. Click the chat icon in the bottom right
-2. Ask questions about disaster reporting
-3. Get instant, context-aware responses in your preferred language
-
-### For Administrators
-
-#### Accessing Admin Panel
-1. Navigate to `http://localhost/your-project/api/view-submissions.php`
-2. Log in with admin credentials
-3. View all submissions with filtering options
-4. Approve, reject, or mark submissions as pending
-5. View statistics and analytics
-
-#### Database Management
-- All submissions are stored in the `resource_submissions` table
-- Status tracking: `pending`, `approved`, `rejected`
-- Automated timestamps for submission tracking
-- Email notifications on new submissions
-
----
-
-## 🔌 API Documentation
+## API Documentation
 
 ### Endpoints
 
@@ -415,62 +490,106 @@ The application will open at `http://localhost:5173`
 
 Submit a new resource for review.
 
+**Request Headers:**
+```
+Content-Type: application/json
+```
+
 **Request Body:**
 ```json
 {
   "name": "John Doe",
   "email": "john@example.com",
-  "organization": "Example Org",
+  "organization": "Example News Organization",
   "country": "United Arab Emirates",
   "resourceType": "tool",
-  "resourceName": "Verification Tool",
-  "resourceUrl": "https://example.com",
-  "description": "A powerful verification tool for journalists",
+  "resourceName": "Advanced Verification Tool",
+  "resourceUrl": "https://example.com/tool",
+  "description": "A comprehensive verification tool for fact-checking",
   "tags": "verification, fact-checking, tools",
   "consent": true
 }
 ```
 
-**Response (Success):**
+**Validation Rules:**
+- 👤 `name`: Required, 3-255 characters
+- 📧 `email`: Required, valid email format
+- 🏢 `organization`: Optional, max 255 characters
+- 🌍 `country`: Optional, max 255 characters
+- 🏷️ `resourceType`: Required, one of: tool, article, guide, course
+- 📝 `resourceName`: Required, 3-255 characters
+- 🔗 `resourceUrl`: Required, valid URL format
+- 📄 `description`: Optional, max 2000 characters
+- 🏷️ `tags`: Optional, comma-separated
+- ✅ `consent`: Required, must be true
+
+**Success Response (200):**
 ```json
 {
   "success": true,
-  "message": "Resource submitted successfully! We'll review it shortly."
+  "message": "Resource submitted successfully! We'll review it shortly.",
+  "submissionId": 123
 }
 ```
 
-**Response (Error):**
+**Error Response (400):**
 ```json
 {
   "success": false,
-  "message": "Error message here"
+  "message": "Invalid email format",
+  "errors": {
+    "email": "Please provide a valid email address"
+  }
+}
+```
+
+**Error Response (500):**
+```json
+{
+  "success": false,
+  "message": "Server error. Please try again later."
 }
 ```
 
 **Features:**
-- ✅ Email validation
-- ✅ URL validation
-- ✅ SQL injection prevention (prepared statements)
-- ✅ XSS protection
-- ✅ Automated email notifications
-- ✅ Error logging
+- Email validation (RFC 5322 compliant)
+- URL validation and sanitization
+- SQL injection prevention via prepared statements
+- XSS protection through input sanitization
+- Automated email notification to admin
+- Error logging for debugging
+- Rate limiting (planned)
 
 #### `GET /api/view-submissions.php`
 
 Admin panel for viewing and managing submissions.
 
-**Query Parameters:**
-- `status` - Filter by status (pending/approved/rejected)
-- `type` - Filter by resource type
-- `search` - Search by keywords
-
 **Authentication:**
-- Basic authentication required
-- Admin credentials stored in database
+- Basic HTTP authentication required
+- Credentials stored in `admin_users` table
+
+**Query Parameters:**
+- `status` - Filter by status: pending, approved, rejected
+- `type` - Filter by resource type
+- `search` - Search by keyword
+- `limit` - Results per page (default: 50)
+- `offset` - Pagination offset
+
+**Example:**
+```
+GET /api/view-submissions.php?status=pending&limit=20
+```
+
+**Response:**
+HTML page with:
+- 📊 Submissions table
+- 🔍 Filtering controls
+- 📈 Statistics dashboard
+- ⚙️ Action buttons (approve/reject)
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### `resource_submissions` Table
 
@@ -489,11 +608,19 @@ CREATE TABLE resource_submissions (
     status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
     INDEX idx_status (status),
     INDEX idx_type (resource_type),
-    INDEX idx_email (email)
-);
+    INDEX idx_email (email),
+    INDEX idx_submitted_at (submitted_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
+
+**Indexes Rationale:**
+- `idx_status` - Fast filtering by submission status
+- `idx_type` - Quick resource type queries
+- `idx_email` - User submission history lookup
+- `idx_submitted_at` - Chronological sorting
 
 ### `admin_users` Table
 
@@ -503,192 +630,855 @@ CREATE TABLE admin_users (
     username VARCHAR(100) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+    role ENUM('admin', 'moderator') DEFAULT 'moderator',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP NULL,
+    
+    INDEX idx_username (username)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
+
+**Security Features:**
+- 🔐 Password hashing using bcrypt (cost factor 12)
+- 🔒 Unique username constraint
+- 👮 Role-based access control
+- 📊 Last login tracking for security audits
+
+### Entity Relationship
+
+```
+┌─────────────────────────┐
+│  resource_submissions   │
+│─────────────────────────│
+│  id (PK)                │
+│  name                   │
+│  email                  │
+│  organization           │
+│  country                │
+│  resource_type          │
+│  resource_name          │
+│  resource_url           │
+│  description            │
+│  tags                   │
+│  status                 │
+│  submitted_at           │
+│  updated_at             │
+└─────────────────────────┘
+
+┌─────────────────────────┐
+│     admin_users         │
+│─────────────────────────│
+│  id (PK)                │
+│  username (UNIQUE)      │
+│  password_hash          │
+│  email                  │
+│  role                   │
+│  created_at             │
+│  last_login             │
+└─────────────────────────┘
 ```
 
 ---
 
-## 📚 Documentation
+## Project Structure
 
-Comprehensive learning materials included in `/docs/`:
-
-| Document | Description | Target Audience |
-|----------|-------------|-----------------|
-| 📘 [PHP & RESTful APIs](./docs/01-php-restful-apis.md) | Complete guide to building REST APIs with PHP | Backend Developers |
-| 🗄️ [MySQL Database Connections](./docs/02-mysql-database-connections.md) | Database connectivity and best practices | Full-Stack Developers |
-| 🔐 [User Authentication Systems](./docs/03-user-authentication-systems.md) | Secure authentication implementation | Security-focused Developers |
-| 📖 [SQL for Absolute Beginners](./docs/04-sql-for-beginners.md) | SQL fundamentals and queries | Beginners |
-| 🌳 [Git & GitHub Basics](./docs/05-git-github-basics.md) | Version control essentials | All Developers |
-| 🚀 [Deployment Guide](./docs/06-deployment-guide.md) | Production deployment steps | DevOps Engineers |
-| 💼 [Full-Stack Interview Prep](./docs/07-full-stack-interview-prep.md) | Technical interview preparation | Job Seekers |
-
-**Perfect for:**
-- 📝 Job application portfolios
-- 🎓 Learning full-stack development
-- 🛠️ DevOps skill building
-- 💼 Technical interviews
+```
+media-toolkit-disaster-reporting/
+│
+├── src/                                # Source Code
+│   │
+│   ├── components/                     # React Components
+│   │   ├── ui/                        # UI Primitives (60+ components)
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── input.tsx
+│   │   │   └── ...
+│   │   │
+│   │   ├── Navigation.tsx             # Main Navigation Component
+│   │   ├── Footer.tsx                 # Site Footer
+│   │   ├── Breadcrumbs.tsx           # Navigation Breadcrumbs
+│   │   ├── SearchBar.tsx             # Advanced Search
+│   │   ├── ResourceCard.tsx          # Resource Display Card
+│   │   ├── DynamicNewsFeed.tsx       # Multi-Source News Aggregator
+│   │   ├── EmergencyBanner.tsx       # Alert System
+│   │   ├── ExpertVoices.tsx          # Expert Content Section
+│   │   ├── BackToTop.tsx             # Scroll Utility
+│   │   ├── PageTypeBadge.tsx         # Dynamic/Static Indicator
+│   │   └── BilingualText.tsx         # i18n Wrapper
+│   │
+│   ├── pages/                         # Route Components (27 pages)
+│   │   │
+│   │   ├── HomePage.tsx               # Landing Page
+│   │   ├── CrisisReporting.tsx        # Crisis Guidelines
+│   │   ├── BreakingNews.tsx          # Breaking News Tools
+│   │   ├── Verification.tsx           # Verification Overview
+│   │   ├── Tools.tsx                  # Digital Tools Overview
+│   │   ├── DataMaps.tsx              # Data & Mapping Resources
+│   │   ├── Safety.tsx                 # Safety Guidelines
+│   │   ├── Training.tsx               # Training Resources
+│   │   ├── RiskCommunication.tsx     # Risk Communication
+│   │   ├── Influencers.tsx           # Influencer Guidelines
+│   │   ├── Citizens.tsx              # Citizen Reporting
+│   │   ├── About.tsx                  # About Platform
+│   │   ├── SubmitPage.tsx            # Resource Submission
+│   │   ├── SiteClassification.tsx    # Classification Info
+│   │   │
+│   │   ├── Verification-Tools/        # Verification Sub-Section
+│   │   │   ├── ImageVerification.tsx
+│   │   │   ├── VideoAnalysis.tsx
+│   │   │   ├── Geolocation.tsx
+│   │   │   ├── AccountVerification.tsx
+│   │   │   ├── FactCheckDatabases.tsx
+│   │   │   └── AIDetection.tsx
+│   │   │
+│   │   └── Digital-Tools/             # Tools Sub-Section
+│   │       ├── AIWriting.tsx
+│   │       ├── Automation.tsx
+│   │       ├── MediaCreation.tsx
+│   │       ├── Research.tsx
+│   │       ├── TechnicalTools.tsx
+│   │       └── VerificationSafety.tsx
+│   │
+│   ├── locales/                       # Internationalization
+│   │   ├── en.ts                     # English Translations
+│   │   └── ar.ts                     # Arabic Translations
+│   │
+│   ├── styles/
+│   │   └── globals.css               # Global Styles & Tailwind
+│   │
+│   ├── App.tsx                        # Main Application (26+ routes)
+│   ├── main.tsx                       # React Entry Point
+│   ├── i18n.ts                        # i18next Configuration
+│   └── vite-env.d.ts                 # TypeScript Definitions
+│
+├── api/                               # PHP Backend
+│   ├── submit-resource.php           # Form Submission Handler
+│   ├── view-submissions.php          # Admin Panel
+│   ├── config.php                    # Configuration (gitignored)
+│   ├── test-connection.php           # DB Connection Test
+│   ├── test-database.php             # Database Test
+│   └── test-form.html                # Form Testing Utility
+│
+├── database/
+│   └── setup.sql                     # Database Schema & Seeds
+│
+├── docs/                             # Comprehensive Documentation
+│   ├── 01-php-restful-apis.md
+│   ├── 02-mysql-database-connections.md
+│   ├── 03-user-authentication-systems.md
+│   ├── 04-sql-for-beginners.md
+│   ├── 05-git-github-basics.md
+│   ├── 06-deployment-guide.md
+│   └── 07-full-stack-interview-prep.md
+│
+├── public/                           # Static Assets
+│   ├── logo.png
+│   └── favicon.ico
+│
+├── .gitignore                        # Git Ignore Rules
+├── index.html                        # HTML Entry Point
+├── package.json                      # Dependencies
+├── package-lock.json                 # Dependency Lock
+├── tsconfig.json                     # TypeScript Config
+├── tsconfig.node.json               # TypeScript Node Config
+├── vite.config.ts                   # Vite Configuration
+├── tailwind.config.js               # Tailwind Configuration
+├── postcss.config.js                # PostCSS Configuration
+├── robots.txt                       # SEO - Search Directives
+├── sitemap.xml                      # SEO - Site Structure
+├── LICENSE                          # MIT License
+└── README.md                        # This File
+```
 
 ---
 
-## 🌐 Deployment
+## Usage
 
-### Frontend Deployment (Netlify/Vercel)
+### For End Users
+
+#### Browsing the Platform
+
+1. **Navigate Sections**
+   - 🧭 Use the main navigation menu to explore 13 primary sections
+   - 📂 Sub-menus provide access to specialized tools and resources
+   - 🍞 Breadcrumbs help track your location within the site
+
+2. **Language Switching**
+   - 🔄 Click the language toggle in the navigation bar
+   - 🌐 Choose between English (EN) and Arabic (AR)
+   - ↔️ Layout automatically adjusts for RTL (Arabic)
+   - 💾 Preference is saved for future visits
+
+3. **Search Functionality**
+   - 🔍 Use the search bar to find specific tools or resources
+   - 📑 Results are categorized for easy navigation
+   - 🔗 Both internal pages and external resources are indexed
+
+4. **News Feed**
+   - 📰 Access real-time humanitarian news on the homepage
+   - 🔍 Filter by source or category
+   - 🔗 Click through to original articles
+   - 🔄 News updates every 30 minutes
+
+#### Submitting a Resource
+
+1. Navigate to **Submit a Resource** page
+2. Complete the submission form:
+   - **Personal Information:** Name, email, organization, country
+   - **Resource Details:** Type, name, URL
+   - **Description:** Detailed information about the resource
+   - **Tags:** Relevant keywords for categorization
+   - **Consent:** Agree to terms and conditions
+3. Click **Submit**
+4. Receive confirmation email
+5. Resource enters admin review queue
+
+#### Using AI Chatbot
+
+1. Click the chat icon in the bottom-right corner
+2. Type your question in English or Arabic
+3. Receive context-aware responses
+4. Chat history persists during your session
+
+### For Administrators
+
+#### Accessing Admin Panel
+
+1. 🌐 Navigate to: `http://yourdomain.com/api/view-submissions.php`
+2. 🔐 Enter admin credentials (default: see setup.sql)
+3. 📊 Access the submissions dashboard
+
+#### Managing Submissions
+
+1. **View All Submissions**
+   - 📋 See complete list with status indicators
+   - 👁️ View submission details
+
+2. **Filter & Search**
+   - 🔍 Filter by status (pending/approved/rejected)
+   - 🏷️ Filter by resource type
+   - 🔎 Search by keywords
+
+3. **Review Actions**
+   - ✅ Approve high-quality submissions
+   - ❌ Reject inappropriate content
+   - ⏳ Mark for additional review
+
+4. **Analytics**
+   - 📊 View submission statistics
+   - 📈 Track approval rates
+   - 📉 Monitor submission trends
+
+---
+
+## Documentation
+
+Comprehensive learning materials and technical documentation:
+
+### Available Documentation
+
+| Document | Topics Covered | Purpose |
+|----------|---------------|---------|
+| **PHP & RESTful APIs** | API design, routing, validation, security | Backend development |
+| **MySQL Connections** | Database connectivity, mysqli, PDO, connection pooling | Database integration |
+| **User Authentication** | Session management, password hashing, JWT, OAuth | Security implementation |
+| **SQL for Beginners** | CRUD operations, joins, indexes, optimization | Database fundamentals |
+| **Git & GitHub** | Version control, branching, collaboration, CI/CD | Development workflow |
+| **Deployment Guide** | Server setup, SSL, optimization, monitoring | Production deployment |
+| **Interview Prep** | Common questions, technical challenges, best practices | Job preparation |
+
+### Documentation Features
+
+- 📖 Step-by-step tutorials
+- 💻 Code examples and snippets
+- ✅ Best practices and patterns
+- 🔒 Security considerations
+- ⚡ Performance optimization tips
+- 🔧 Troubleshooting guides
+- 🌍 Real-world scenarios
+
+**Ideal for:**
+- 💼 Job interview preparation
+- 📁 Portfolio presentations
+- 🎓 Technical skill development
+- 🔄 DevOps learning path
+- 🚀 Full-stack development mastery
+
+---
+
+## Deployment
+
+### Frontend Deployment
 
 #### Option 1: Netlify
 
 ```bash
-# Build for production
+# Install Netlify CLI
+npm install -g netlify-cli
+
+# Build the project
 npm run build
 
 # Deploy to Netlify
 netlify deploy --prod --dir=dist
 ```
 
+**Netlify Configuration** (`netlify.toml`):
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
+
 #### Option 2: Vercel
 
 ```bash
 # Install Vercel CLI
-npm i -g vercel
+npm install -g vercel
 
 # Deploy
 vercel --prod
 ```
 
-### Backend Deployment (Shared Hosting/VPS)
+**Vercel Configuration** (`vercel.json`):
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+```
 
-1. **Upload PHP files** to your server's public directory
-2. **Import database** via phpMyAdmin or command line:
-   ```bash
-   mysql -u username -p database_name < database/setup.sql
-   ```
-3. **Update configuration** in PHP files with production credentials
-4. **Configure .htaccess** for clean URLs and security
-5. **Set up SSL certificate** (Let's Encrypt recommended)
+### Backend Deployment
 
-### Environment Variables
+#### Shared Hosting (cPanel)
 
-Create `.env` file for production:
+1. **Upload Files:**
+   - FTP upload `api/` folder to `public_html/api/`
+   - Ensure correct file permissions (644 for files, 755 for directories)
 
+2. **Database Setup:**
+   - Create MySQL database via cPanel
+   - Import `database/setup.sql` via phpMyAdmin
+   - Update `api/config.php` with database credentials
+
+3. **Configuration:**
+   - Set up email service (SMTP credentials)
+   - Configure error logging
+   - Enable HTTPS/SSL
+
+4. **Testing:**
+   - Test API endpoints
+   - Verify database connectivity
+   - Check email notifications
+
+#### VPS/Cloud Deployment (Ubuntu/Debian)
+
+```bash
+# Install LAMP Stack
+sudo apt update
+sudo apt install apache2 mysql-server php libapache2-mod-php php-mysql
+
+# Configure Apache
+sudo nano /etc/apache2/sites-available/media-toolkit.conf
+
+# Enable site
+sudo a2ensite media-toolkit
+sudo systemctl reload apache2
+
+# Import database
+mysql -u root -p < database/setup.sql
+
+# Set permissions
+sudo chown -R www-data:www-data /var/www/media-toolkit
+sudo chmod -R 755 /var/www/media-toolkit
+```
+
+### Environment Configuration
+
+**Production `.env`:**
 ```env
 # Database
 DB_HOST=localhost
-DB_USER=your_db_user
-DB_PASS=your_db_password
-DB_NAME=media_toolkit
+DB_USER=production_user
+DB_PASS=secure_password_here
+DB_NAME=media_toolkit_prod
 
 # Email
 ADMIN_EMAIL=u18103921@sharjah.ac.ae
-SMTP_HOST=smtp.example.com
+SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=app_specific_password
 
-# API Keys (if needed)
-API_KEY=your_api_key_here
+# Application
+APP_ENV=production
+DEBUG_MODE=false
+APP_URL=https://yourdomain.com
+
+# Security
+SESSION_LIFETIME=7200
+CSRF_PROTECTION=true
 ```
 
 ### Pre-Deployment Checklist
 
-- ✅ Run `npm run build` successfully
-- ✅ Test all forms and API endpoints
-- ✅ Verify database connections
-- ✅ Check email notifications
-- ✅ Test bilingual functionality (EN/AR)
-- ✅ Validate SEO meta tags
-- ✅ Ensure robots.txt and sitemap.xml are accessible
-- ✅ Test on mobile devices
-- ✅ Check HTTPS/SSL configuration
-- ✅ Verify CORS settings for news feed
-- ✅ Test admin panel authentication
+**Frontend:**
+- [ ] Run production build successfully
+- [ ] Test all routes and pages
+- [ ] Verify responsive design on multiple devices
+- [ ] Check console for errors
+- [ ] Validate SEO meta tags
+- [ ] Test language switching
+- [ ] Verify news feed functionality
+- [ ] Check accessibility compliance
+
+**Backend:**
+- [ ] Database credentials configured
+- [ ] Email service tested
+- [ ] API endpoints respond correctly
+- [ ] Error logging enabled
+- [ ] Security headers configured
+- [ ] HTTPS/SSL certificate installed
+- [ ] CORS settings appropriate
+- [ ] Input validation working
+- [ ] SQL injection prevention verified
+
+**SEO & Performance:**
+- [ ] Sitemap.xml accessible
+- [ ] Robots.txt configured
+- [ ] Meta descriptions present
+- [ ] Open Graph tags set
+- [ ] Page load time < 3 seconds
+- [ ] Mobile-friendly test passed
+- [ ] Google Search Console setup
 
 ---
 
-## 🤝 Contributing
+## Testing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+### Manual Testing Checklist
+
+**Functionality Testing:**
+- [ ] All 27 pages load without errors
+- [ ] Navigation menu works correctly
+- [ ] Language switching (EN ↔ AR)
+- [ ] Search functionality returns results
+- [ ] News feed loads and updates
+- [ ] Form submission completes successfully
+- [ ] Admin panel accessible and functional
+- [ ] AI chatbot responds appropriately
+
+**Cross-Browser Testing:**
+- [ ] Chrome (latest)
+- [ ] Firefox (latest)
+- [ ] Safari (latest)
+- [ ] Edge (latest)
+- [ ] Mobile browsers (iOS Safari, Chrome Mobile)
+
+**Responsive Design Testing:**
+- [ ] Desktop (1920x1080, 1366x768)
+- [ ] Tablet (768x1024, 1024x768)
+- [ ] Mobile (375x667, 414x896)
+- [ ] Large displays (2560x1440)
+
+**Performance Testing:**
+- [ ] Lighthouse score > 90
+- [ ] First Contentful Paint < 1.5s
+- [ ] Time to Interactive < 3s
+- [ ] No console errors
+- [ ] Network requests optimized
+
+**Security Testing:**
+- [ ] SQL injection attempts blocked
+- [ ] XSS attempts sanitized
+- [ ] CSRF protection enabled
+- [ ] Authentication system secure
+- [ ] Sensitive data encrypted
+
+### Database Testing
+
+```bash
+# Test connection
+php api/test-connection.php
+
+# Test database structure
+php api/test-database.php
+
+# Manual SQL verification
+mysql -u root -p media_toolkit
+SHOW TABLES;
+DESCRIBE resource_submissions;
+SELECT COUNT(*) FROM resource_submissions;
+```
+
+---
+
+## Contributing
+
+Contributions are welcome and appreciated! This project benefits from community involvement.
 
 ### How to Contribute
 
-1. **Fork the Project**
-2. **Create your Feature Branch**
+1. **Fork the Repository**
    ```bash
-   git checkout -b feature/AmazingFeature
+   # Click "Fork" on GitHub 🍴
    ```
-3. **Commit your Changes**
+
+2. **Clone Your Fork**
    ```bash
-   git commit -m 'Add some AmazingFeature'
+   git clone https://github.com/your-username/media-toolkit-disaster-reporting.git
+   cd media-toolkit-disaster-reporting
    ```
-4. **Push to the Branch**
+
+3. **Create a Feature Branch**
    ```bash
-   git push origin feature/AmazingFeature
+   git checkout -b feature/amazing-feature
    ```
-5. **Open a Pull Request**
+
+4. **Make Your Changes**
+   - ✍️ Write clean, documented code
+   - 📏 Follow existing code style
+   - 💬 Add comments where necessary
+   - 📚 Update documentation if needed
+
+5. **Test Your Changes**
+   - 🧪 Run the application locally
+   - ✅ Test all affected functionality
+   - 🚫 Ensure no breaking changes
+
+6. **Commit Your Changes**
+   ```bash
+   git add .
+   git commit -m "Add: Brief description of your feature"
+   ```
+
+7. **Push to Your Fork**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+8. **Open a Pull Request**
+   - 🌐 Go to the original repository
+   - 🔄 Click "New Pull Request"
+   - 📝 Describe your changes in detail
+   - 🔗 Link any related issues
 
 ### Development Guidelines
 
-- 📝 Follow existing code style and conventions
-- ✅ Write clear, descriptive commit messages
-- 🧪 Test your changes thoroughly
-- 📖 Update documentation as needed
-- 🌐 Ensure bilingual support (EN/AR)
-- ♿ Maintain accessibility standards
-- 🎨 Follow the established design system
+**Code Style:**
+- Use TypeScript for type safety
+- Follow React best practices
+- Use functional components and hooks
+- Write self-documenting code
+- Add JSDoc comments for complex functions
 
-### Code Review Process
+**Commit Message Format:**
+```
+Type: Brief description
 
-1. All submissions require review
-2. Maintainers will provide feedback
-3. Changes may be requested
-4. Once approved, your contribution will be merged
+Detailed explanation if necessary
+
+- Change 1
+- Change 2
+
+Fixes #issue-number
+```
+
+**Types:**
+- `Add:` New feature
+- `Fix:` Bug fix
+- `Update:` Modify existing feature
+- `Remove:` Delete feature or code
+- `Docs:` Documentation only
+- `Style:` Code style/formatting
+- `Refactor:` Code restructuring
+- `Test:` Adding tests
+- `Chore:` Maintenance tasks
+
+**Pull Request Guidelines:**
+- 🎯 Keep PRs focused on single feature/fix
+- 📸 Include screenshots for UI changes
+- 📚 Update documentation
+- ✅ Ensure all tests pass
+- 👥 Request review from maintainers
+
+### Areas for Contribution
+
+**High Priority:**
+- 🌍 Additional language translations (French, Spanish, Chinese)
+- ♿ Accessibility improvements (WCAG AAA compliance)
+- ⚡ Performance optimizations
+- 📱 Mobile app development (React Native)
+- 📊 Advanced analytics integration
+
+**Medium Priority:**
+- 🔧 Additional tool categories
+- 🔐 User authentication system
+- ⭐ Rating and review system
+- 🌙 Dark mode implementation
+- 📲 Progressive Web App features
+
+**Good First Issues:**
+- 📚 Documentation improvements
+- 🐛 Bug fixes
+- 🎨 UI/UX enhancements
+- 🧪 Test coverage expansion
+- 🌐 Translation updates
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
-### ✅ Completed (Version 1.0)
-- [x] 27 fully functional pages
-- [x] Bilingual interface (EN/AR) with RTL
-- [x] Dynamic news feed from 7 sources
-- [x] Full PHP/MySQL backend
-- [x] Admin panel for submissions
+### Version 1.0 - Completed ✅
+
+- [x] 27 fully functional pages with complete content
+- [x] Bilingual interface (EN/AR) with RTL support
+- [x] Dynamic news aggregation from 7 trusted sources
+- [x] Full PHP/MySQL backend with RESTful API
+- [x] Admin panel for submission management
 - [x] AI chatbot integration
-- [x] 368+ verified tools
-- [x] Comprehensive documentation
-- [x] SEO optimization
+- [x] 368+ verified tools across 6 categories
+- [x] Comprehensive documentation (7 guides)
+- [x] SEO optimization (sitemap, robots.txt, meta tags)
+- [x] Responsive design for all devices
+- [x] Professional Git workflow implementation
 
-### 🔜 Upcoming Features (Version 1.1)
-- [ ] User authentication system (login/register)
-- [ ] Bookmark/favorites functionality
-- [ ] Advanced filtering and sorting
-- [ ] Tool rating and review system
-- [ ] Newsletter subscription
-- [ ] Dark mode support
-- [ ] PWA (Progressive Web App) capabilities
-- [ ] Advanced analytics dashboard
-- [ ] API for third-party integrations
-- [ ] Mobile app (React Native)
+### Version 1.1 - Planned (Q2 2026)
 
-### 💡 Future Enhancements (Version 2.0)
-- [ ] Machine learning-based tool recommendations
-- [ ] Real-time collaboration features
-- [ ] Multi-language support (FR, ES, ZH)
-- [ ] Video tutorials and webinars
-- [ ] Community forum
-- [ ] Premium/Pro features
-- [ ] Integration with fact-checking APIs
-- [ ] Automated content moderation
+- [ ] **User Authentication System**
+  - 🔐 User registration and login
+  - 🔄 Password reset functionality
+  - ✅ Email verification
+  - 👤 Profile management
 
-**Want to suggest a feature?** [Open an issue](https://github.com/yourusername/media-toolkit-disaster-reporting/issues) with the tag "enhancement"
+- [ ] **Enhanced Features**
+  - 🔖 Bookmark/favorites system
+  - 🔍 Advanced filtering and sorting
+  - ⭐ Tool rating and review system
+  - 📧 Newsletter subscription
+  - 📱 Share to social media
+
+- [ ] **Technical Improvements**
+  - 🌙 Dark mode support
+  - 📲 PWA capabilities (offline mode)
+  - 💾 Advanced caching strategy
+  - 📊 Performance monitoring
+  - 🐛 Error tracking (Sentry integration)
+
+### Version 2.0 - Future (Q4 2026)
+
+- [ ] **AI & Machine Learning**
+  - 🤖 ML-based tool recommendations
+  - 🎯 Content personalization
+  - 🏷️ Automated content categorization
+  - 📊 Sentiment analysis for news
+
+- [ ] **Community Features**
+  - ✍️ User-generated content
+  - 💬 Discussion forums
+  - 👨‍🏫 Expert Q&A section
+  - ⭐ Community ratings and reviews
+
+- [ ] **Advanced Functionality**
+  - 🤝 Real-time collaboration tools
+  - 🌍 Multi-language support (FR, ES, ZH, RU)
+  - 🎥 Video tutorials and webinars
+  - 💎 Premium/Pro features
+  - 🔌 API for third-party integrations
+
+- [ ] **Mobile Development**
+  - 📱 Native mobile apps (iOS/Android)
+  - 🔔 Push notifications
+  - 💾 Offline functionality
+  - 📲 Mobile-specific features
+
+### Version 3.0 - Vision (2027)
+
+- [ ] **Enterprise Features**
+  - White-label solution for organizations
+  - Team collaboration tools
+  - Advanced analytics dashboard
+  - Custom branding options
+  - SLA guarantees
+
+- [ ] **Integration Ecosystem**
+  - Fact-checking API integrations
+  - Social media platform connections
+  - CMS plugins
+  - Browser extensions
+  - Automated content moderation
+
+**Feature Requests:** [Submit an issue](https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting/issues) with the tag `enhancement` ✨
 
 ---
 
-## 📄 License
+## Skills Demonstrated
 
-Distributed under the MIT License. See `LICENSE` file for more information.
+This project showcases comprehensive full-stack development capabilities suitable for professional roles in software engineering, full-stack development, and DevOps.
+
+### Frontend Development
+
+**React Ecosystem:**
+- ✅ React 18 with modern patterns (Hooks, Context, Suspense)
+- ✅ TypeScript for type-safe development and improved DX
+- ✅ Component-driven architecture with 60+ reusable components
+- ✅ State management and data flow optimization
+- ✅ Client-side routing with Wouter (26+ routes)
+- ✅ Performance optimization (lazy loading, code splitting)
+
+**Styling & Design:**
+- ✅ Tailwind CSS utility-first approach
+- ✅ Responsive design (mobile-first methodology)
+- ✅ CSS Grid and Flexbox layouts
+- ✅ Animation and transitions (Framer Motion)
+- ✅ Consistent design system
+- ✅ Accessibility standards (WCAG 2.1)
+
+**Internationalization:**
+- ✅ i18next framework integration
+- ✅ Dynamic language switching
+- ✅ RTL/LTR layout adaptation
+- ✅ Persistent language preferences
+- ✅ Professional translation management
+- ✅ Culturally-appropriate design adaptations
+- ✅ SEO optimization for both languages
+
+**API Integration:**
+- ✅ RESTful API consumption
+- ✅ Asynchronous data fetching
+- ✅ Error handling and retry logic
+- ✅ CORS and proxy handling
+- ✅ Data normalization across sources
+
+### Backend Development
+
+**PHP:**
+- ✅ Server-side programming with PHP 8
+- ✅ RESTful API design and implementation
+- ✅ Input validation and sanitization
+- ✅ Error handling and logging
+- ✅ Email service integration (PHPMailer)
+- ✅ Session management
+
+**Database:**
+- ✅ MySQL database design and normalization
+- ✅ Complex SQL queries (joins, subqueries, aggregations)
+- ✅ Prepared statements (SQL injection prevention)
+- ✅ Strategic indexing for performance
+- ✅ Database migrations and seeding
+- ✅ Data integrity and constraints
+
+**Security:**
+- ✅ SQL injection prevention
+- ✅ XSS protection
+- ✅ CSRF protection implementation
+- ✅ Password hashing (bcrypt)
+- ✅ Input validation (client & server)
+- ✅ Secure session management
+
+### Full-Stack Integration
+
+- ✅ Frontend-backend communication
+- ✅ Form handling and validation (dual-layer)
+- ✅ Database CRUD operations
+- ✅ File upload handling
+- ✅ Error handling across stack
+- ✅ Admin panel development
+- ✅ Real-time data updates
+
+### DevOps & Tools
+
+**Version Control:**
+- ✅ Git workflow (branching, merging, rebasing)
+- ✅ GitHub repository management
+- ✅ Commit message conventions
+- ✅ .gitignore best practices
+
+**Build & Development:**
+- ✅ Vite build tool configuration
+- ✅ Development environment setup
+- ✅ Hot module replacement
+- ✅ Production builds and optimization
+- ✅ Environment variable management
+
+**Testing & QA:**
+- ✅ Manual testing procedures
+- ✅ Cross-browser testing
+- ✅ Responsive design testing
+- ✅ API testing
+- ✅ Database testing
+
+**Deployment:**
+- ✅ Deployment preparation
+- ✅ Server configuration
+- ✅ SSL/TLS setup understanding
+- ✅ SEO optimization
+- ✅ Performance monitoring
+
+### Software Engineering
+
+**Architecture:**
+- ✅ MVC pattern separation
+- ✅ Component-based architecture
+- ✅ Repository pattern implementation
+- ✅ Modular code organization
+- ✅ Scalable project structure
+
+**Best Practices:**
+- ✅ Clean code principles
+- ✅ DRY (Don't Repeat Yourself)
+- ✅ SOLID principles
+- ✅ Code documentation
+- ✅ Error handling strategies
+- ✅ Performance optimization
+
+**Documentation:**
+- ✅ Comprehensive README
+- ✅ Technical documentation (7 guides)
+- ✅ Code comments and JSDoc
+- ✅ API documentation
+- ✅ Database schema documentation
+- ✅ Deployment guides
+
+### Additional Skills
+
+- ✅ Multilingual development (EN/AR with RTL)
+- ✅ News aggregation systems
+- ✅ AI chatbot integration
+- ✅ Admin panel development
+- ✅ Email notification systems
+- ✅ Search functionality implementation
+- ✅ SEO best practices
+- ✅ Accessibility compliance
+
+**Perfect for positions in:**
+- 💼 Full-Stack Developer
+- ⚛️ Frontend Developer (React/TypeScript)
+- 🐘 Backend Developer (PHP/MySQL)
+- 🔄 DevOps Engineer
+- 💻 Software Engineer
+- 🌐 Web Developer
+
+---
+
+## License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ```
 MIT License
 
-Copyright (c) 2026 [Your Name]
+Copyright (c) 2026 Ahmad Dakalbab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -711,157 +1501,112 @@ SOFTWARE.
 
 ---
 
-## 👤 Contact
+## Contact
 
-**Your Name**  
+**Ahmad Dakalbab**
+
 📧 Email: [ahmaddakalbab9@gmail.com](mailto:ahmaddakalbab9@gmail.com)  
-🔗 LinkedIn: [Your LinkedIn Profile](#)  
 🐙 GitHub: [@AhmadDakalbab1](https://github.com/AhmadDakalbab1)  
-🌐 Portfolio: [https://ssccr.uoscloud.org/](#)
+🏫 University: University of Sharjah  
+📧 Academic Email: [u18103921@sharjah.ac.ae](mailto:u18103921@sharjah.ac.ae)
 
-**Project Link:** [https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting](https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting)
+**Project Repository:** [https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting](https://github.com/AhmadDakalbab1/media-toolkit-disaster-reporting)
+
+**Project Status:** Active Development & Maintenance
+
+For questions, suggestions, or collaboration opportunities, feel free to reach out or open an issue on GitHub.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-### Academic Guidance
-- **Prof. Qassim** - Project supervision and guidance
-- **University of Sharjah** - Academic support and resources
+### Academic Supervision
 
-### Trusted Data Sources
-- 🌐 [UN OCHA ReliefWeb](https://reliefweb.int/) - Humanitarian information
-- 🏥 [World Health Organization (WHO)](https://www.who.int/) - Health crisis data
-- 🔴 [International Federation of Red Cross (IFRC)](https://www.ifrc.org/) - Disaster response
-- 👶 [UNICEF](https://www.unicef.org/) - Children in crisis
-- 🏕️ [UNHCR](https://www.unhcr.org/) - Refugee information
-- 🍽️ [World Food Programme (WFP)](https://www.wfp.org/) - Food security
-- 🏥 [Médecins Sans Frontières (MSF)](https://www.msf.org/) - Medical emergencies
+**Prof. Qassim** - Project supervisor and technical advisor 👨‍🏫  
+**University of Sharjah** - Academic support and resources 🏫  
+**College of Communication** - Domain expertise and guidance 📚
+
+### Data Sources & Partners
+
+**Humanitarian Organizations:**
+- [UN OCHA ReliefWeb](https://reliefweb.int/) - Humanitarian information service
+- [World Health Organization (WHO)](https://www.who.int/) - Global health authority
+- [International Federation of Red Cross (IFRC)](https://www.ifrc.org/) - Humanitarian network
+- [UNICEF](https://www.unicef.org/) - Children's emergency fund
+- [UNHCR](https://www.unhcr.org/) - UN Refugee Agency
+- [World Food Programme (WFP)](https://www.wfp.org/) - Food assistance organization
+- [Médecins Sans Frontières (MSF)](https://www.msf.org/) - Medical humanitarian organization
 
 ### Technologies & Frameworks
-- ⚛️ [React](https://react.dev/) - UI framework
-- 📘 [TypeScript](https://www.typescriptlang.org/) - Type safety
-- ⚡ [Vite](https://vitejs.dev/) - Build tool
-- 🎨 [Tailwind CSS](https://tailwindcss.com/) - Styling
-- 🌐 [i18next](https://www.i18next.com/) - Internationalization
-- 🐘 [PHP](https://www.php.net/) - Backend
-- 🗄️ [MySQL](https://www.mysql.com/) - Database
 
-### Resources & Tools
-- 🎯 [Lucide Icons](https://lucide.dev/) - Icon system
-- 📸 [Unsplash](https://unsplash.com/) - Stock imagery
-- 📚 [MDN Web Docs](https://developer.mozilla.org/) - Web development reference
-- 🎓 [freeCodeCamp](https://www.freecodecamp.org/) - Learning resources
+**Frontend:**
+- [React](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Vite](https://vitejs.dev/) - Next generation build tool
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [i18next](https://www.i18next.com/) - Internationalization framework
+
+**Backend:**
+- [PHP](https://www.php.net/) - Server-side scripting
+- [MySQL](https://www.mysql.com/) - Relational database
+- [Apache](https://httpd.apache.org/) - Web server
+
+**Tools & Libraries:**
+- [Lucide Icons](https://lucide.dev/) - Icon library
+- [Recharts](https://recharts.org/) - Charting library
+- [Wouter](https://github.com/molefrog/wouter) - Minimalist routing
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+
+### Learning Resources
+
+- 📚 [MDN Web Docs](https://developer.mozilla.org/) - Web development documentation
+- ⚛️ [React Documentation](https://react.dev/) - Official React guides
+- 📘 [TypeScript Handbook](https://www.typescriptlang.org/docs/) - TypeScript documentation
+- 🐘 [PHP Manual](https://www.php.net/manual/) - PHP documentation
+- 🗄️ [MySQL Documentation](https://dev.mysql.com/doc/) - MySQL reference
+- 🎓 [freeCodeCamp](https://www.freecodecamp.org/) - Coding education platform
+- 💬 [Stack Overflow](https://stackoverflow.com/) - Developer Q&A community
 
 ### Special Thanks
-- 🌟 Open-source community for incredible tools and libraries
-- 💡 Journalists and humanitarian workers who inspired this project
-- 🤝 Beta testers and early users for valuable feedback
-- 📖 Technical writers and documentation contributors
 
----
+- Open-source community for incredible tools and libraries
+- Journalists and humanitarian workers who inspired this project
+- Beta testers for valuable feedback and suggestions
+- Translation contributors for bilingual accuracy
+- GitHub for hosting and collaboration tools
 
-## 📊 Project Stats
+### Inspiration
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/media-toolkit-disaster-reporting)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/media-toolkit-disaster-reporting?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/media-toolkit-disaster-reporting?style=social)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/media-toolkit-disaster-reporting)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/media-toolkit-disaster-reporting)
-
----
-
-## 🎖️ Skills Demonstrated
-
-This project showcases proficiency in:
-
-### **Frontend Development**
-✅ React 18 with Hooks and modern patterns  
-✅ TypeScript for type-safe development  
-✅ Component-driven architecture (60+ components)  
-✅ State management and data flow  
-✅ Responsive design with Tailwind CSS  
-✅ Internationalization (i18next) with RTL support  
-✅ Client-side routing (Wouter)  
-✅ API integration and data fetching  
-✅ Performance optimization  
-
-### **Backend Development**
-✅ PHP server-side programming  
-✅ RESTful API design and implementation  
-✅ MySQL database design and management  
-✅ SQL queries with prepared statements  
-✅ Input validation and sanitization  
-✅ Security best practices (XSS, SQL injection prevention)  
-✅ Email integration (PHPMailer)  
-✅ Session and authentication management  
-
-### **Full-Stack Integration**
-✅ Frontend-backend communication  
-✅ Form handling and validation (client + server)  
-✅ Database CRUD operations  
-✅ Error handling and logging  
-✅ Admin panel development  
-
-### **DevOps & Deployment**
-✅ Version control with Git/GitHub  
-✅ Build tools and bundling (Vite)  
-✅ Development environment setup (WAMP/XAMPP)  
-✅ SEO optimization (sitemap, robots.txt)  
-✅ Deployment preparation  
-✅ Documentation and testing utilities  
-
-### **Software Engineering**
-✅ Project architecture and organization  
-✅ Code reusability and modularity  
-✅ Clean code principles  
-✅ Technical documentation  
-✅ Accessibility standards  
-✅ Cross-browser compatibility  
-✅ Performance optimization  
+This project was inspired by the critical need for accessible, reliable, and comprehensive resources for journalists and citizens covering humanitarian crises and disasters. It aims to contribute to truth, accuracy, and responsible reporting in challenging circumstances. 🌍✨
 
 ---
 
 <div align="center">
 
-### 🌟 If this project helped you, please give it a star! ⭐
+### ⭐ Star this repository if it helped you!
 
-**Made with ❤️ for journalists, humanitarian workers, and truth-seekers worldwide**
+![GitHub stars](https://img.shields.io/github/stars/AhmadDakalbab1/media-toolkit-disaster-reporting?style=social)
+![GitHub forks](https://img.shields.io/github/forks/AhmadDakalbab1/media-toolkit-disaster-reporting?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/AhmadDakalbab1/media-toolkit-disaster-reporting?style=social)
+
+**Made with dedication for journalists, humanitarian workers, and truth-seekers worldwide**
 
 </div>
 
 ---
 
-## 📸 Screenshots
+## Project Statistics
 
-> **Note:** Add screenshots here to showcase your project's interface
-
-### Home Page
-![Home Page Screenshot](#)
-
-### News Feed
-![News Feed Screenshot](#)
-
-### Resource Directory
-![Resource Directory Screenshot](#)
-
-### Bilingual Support (EN/AR)
-![Bilingual Support Screenshot](#)
-
-### Admin Panel
-![Admin Panel Screenshot](#)
-
-### Mobile Responsive
-![Mobile View Screenshot](#)
+![GitHub repo size](https://img.shields.io/github/repo-size/AhmadDakalbab1/media-toolkit-disaster-reporting)
+![GitHub language count](https://img.shields.io/github/languages/count/AhmadDakalbab1/media-toolkit-disaster-reporting)
+![GitHub top language](https://img.shields.io/github/languages/top/AhmadDakalbab1/media-toolkit-disaster-reporting)
+![GitHub last commit](https://img.shields.io/github/last-commit/AhmadDakalbab1/media-toolkit-disaster-reporting)
+![GitHub issues](https://img.shields.io/github/issues/AhmadDakalbab1/media-toolkit-disaster-reporting)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AhmadDakalbab1/media-toolkit-disaster-reporting)
 
 ---
 
-## 🔖 Keywords
-
-`disaster-reporting` `journalism-tools` `crisis-communication` `fact-checking` `verification-tools` `humanitarian-news` `bilingual-website` `react-typescript` `full-stack-development` `php-mysql` `news-aggregation` `media-toolkit` `arabic-rtl` `i18next` `vite` `tailwind-css` `open-source` `university-project` `devops` `web-development`
-
----
-
-**Last Updated:** February 14, 2026  
-**Version:** 1.0.0  
-**Status:** Active Development ✅
+**Documentation Version:** 1.0.0  
+**Last Updated:** February 14, 2026 📅  
+**Maintained By:** Ahmad Dakalbab 👨‍💻  
+**Project Status:** ✅ Active Development & Production Ready
