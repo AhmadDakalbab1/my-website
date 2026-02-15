@@ -87,15 +87,15 @@ This platform solves real-world challenges by:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    Client Layer                          │
+│                    Client Layer                         │
 │  React 18 + TypeScript + Tailwind CSS + i18next         │
 │  (27 Pages, 60+ Components, Wouter Routing)             │
 └─────────────────────┬───────────────────────────────────┘
                       │
                       ├──────── HTTP/HTTPS ────────┐
-                      │                             │
-┌─────────────────────▼───────────────┐   ┌────────▼────────────┐
-│     Application Layer (PHP)         │   │   External APIs     │
+                      │                            │
+┌─────────────────────▼───────────────┐   ┌────────▼───────────┐
+│     Application Layer (PHP)         │   │   External APIs    │
 │  ├─ RESTful Endpoints               │   │  ├─ ReliefWeb API  │
 │  ├─ Request Validation              │   │  ├─ IFRC GO API    │
 │  ├─ Business Logic                  │   │  └─ RSS Feeds (5)  │
