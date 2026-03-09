@@ -45,11 +45,12 @@
 
 ## About The Project
 
-The **Media Toolkit for Disaster Reporting** is a production-grade, full-stack web application designed to serve as a comprehensive resource directory for journalists, influencers, and citizens covering disasters and humanitarian crises. The platform addresses the critical need for verified, accessible, and culturally-appropriate information during crisis situations.
+The **Media Toolkit for Disaster Reporting** is a production-grade, full-stack web application designed to serve as a comprehensive resource directory for journalists, influencers, and citizens covering disasters and humanitarian crises. The platform addresses the critical need for verified, accessible, and culturally-appropriate information during crisis situations. LOL change #2
 
 ### Project Scope
 
 This enterprise-level application features:
+
 - 🌐 **27 fully responsive pages** organized into 13 thematic sections
 - 🛠️ **368+ verified tools and resources** across multiple categories
 - 📡 **Real-time news aggregation** from 7 trusted humanitarian organizations
@@ -62,6 +63,7 @@ This enterprise-level application features:
 ### Academic Context
 
 Developed as part of academic requirements at the **University of Sharjah** under the supervision of **Prof. Qassim**, this project demonstrates:
+
 - 💻 Professional software engineering practices
 - 🔧 Full-stack development expertise
 - 🔄 DevOps principles and methodologies
@@ -72,6 +74,7 @@ Developed as part of academic requirements at the **University of Sharjah** unde
 ### Business Value
 
 This platform solves real-world challenges by:
+
 - 📌 **Centralizing** scattered disaster reporting resources
 - ⚡ **Reducing** information verification time for journalists
 - ✅ **Improving** accuracy through fact-checking tool integration
@@ -139,6 +142,7 @@ This platform solves real-world challenges by:
 ### 1. Comprehensive Resource Directory
 
 **13 Main Sections:**
+
 - Crisis Reporting - Professional guidelines and best practices
 - Breaking News Tools - Real-time verification resources
 - Verification & Fact-Checking - 6 specialized sub-sections
@@ -160,6 +164,7 @@ This platform solves real-world challenges by:
 ### 2. Real-Time News Aggregation System
 
 **Multi-Source Integration:**
+
 - UN OCHA ReliefWeb (REST API)
 - World Health Organization (RSS)
 - International Federation of Red Cross (GO API)
@@ -169,6 +174,7 @@ This platform solves real-world challenges by:
 - Médecins Sans Frontières (RSS)
 
 **Advanced Features:**
+
 - Unified data normalization across disparate sources
 - Proxy-based CORS handling for cross-origin requests
 - Intelligent image placeholder system
@@ -180,6 +186,7 @@ This platform solves real-world challenges by:
 ### 3. Bilingual Architecture (EN/AR)
 
 **Internationalization Infrastructure:**
+
 - i18next framework with react-i18next bindings
 - Complete translation coverage across all pages
 - Dynamic RTL/LTR layout switching
@@ -191,12 +198,14 @@ This platform solves real-world challenges by:
 ### 4. Full-Stack Submission System
 
 **Frontend:**
+
 - Comprehensive validation (email, URL, required fields)
 - Real-time user feedback
 - Accessible form design
 - Loading states and error handling
 
 **Backend (PHP):**
+
 - RESTful API endpoint (`POST /api/submit-resource.php`)
 - Server-side validation and sanitization
 - SQL injection prevention (prepared statements)
@@ -205,12 +214,14 @@ This platform solves real-world challenges by:
 - Error logging and monitoring
 
 **Database:**
+
 - Structured schema with proper indexing
 - Status workflow (pending → approved/rejected)
 - Automated timestamps
 - Admin user management
 
 **Admin Panel:**
+
 - Submission review interface
 - Filtering and search capabilities
 - Status management
@@ -228,6 +239,7 @@ This platform solves real-world challenges by:
 ### 6. Advanced Search & Navigation
 
 **Search System:**
+
 - 📑 Resource indexing and categorization
 - 🔍 Fuzzy search algorithm
 - 🔗 Internal and external resource linking
@@ -235,6 +247,7 @@ This platform solves real-world challenges by:
 - ⚡ Real-time results
 
 **Navigation Features:**
+
 - 🍞 Breadcrumb trail system
 - ⬆️ Back-to-top functionality
 - 📱 Mobile-responsive menu
@@ -244,6 +257,7 @@ This platform solves real-world challenges by:
 ### 7. UI Component Library
 
 **60+ Reusable Components:**
+
 - 🧭 Navigation and Footer
 - 🎴 Resource Cards
 - 🏷️ Dynamic Badges
@@ -256,6 +270,7 @@ This platform solves real-world challenges by:
 - ✨ And more...
 
 **Design System:**
+
 - 🎨 Consistent Tailwind CSS styling
 - ♿ Accessibility standards (WCAG 2.1)
 - 📱 Mobile-first responsive design
@@ -268,48 +283,48 @@ This platform solves real-world challenges by:
 
 ### Frontend Technologies
 
-| Technology | Purpose | Version |
-|-----------|---------|---------|
-| **React** | UI Framework | 18.x |
-| **TypeScript** | Type Safety & Developer Experience | 5.x |
-| **Vite** | Build Tool & Dev Server | 5.x |
-| **Tailwind CSS** | Utility-First Styling | 3.x |
-| **i18next** | Internationalization Framework | 23.x |
-| **react-i18next** | React Bindings for i18n | 14.x |
-| **Wouter** | Lightweight Routing | 3.x |
-| **Lucide React** | Icon Library | Latest |
-| **Recharts** | Data Visualization | 2.x |
-| **Framer Motion** | Animation Library | 11.x |
+| Technology        | Purpose                            | Version |
+| ----------------- | ---------------------------------- | ------- |
+| **React**         | UI Framework                       | 18.x    |
+| **TypeScript**    | Type Safety & Developer Experience | 5.x     |
+| **Vite**          | Build Tool & Dev Server            | 5.x     |
+| **Tailwind CSS**  | Utility-First Styling              | 3.x     |
+| **i18next**       | Internationalization Framework     | 23.x    |
+| **react-i18next** | React Bindings for i18n            | 14.x    |
+| **Wouter**        | Lightweight Routing                | 3.x     |
+| **Lucide React**  | Icon Library                       | Latest  |
+| **Recharts**      | Data Visualization                 | 2.x     |
+| **Framer Motion** | Animation Library                  | 11.x    |
 
 ### Backend Technologies
 
-| Technology | Purpose | Version |
-|-----------|---------|---------|
-| **PHP** | Server-Side Language | 8.x |
-| **MySQL** | Relational Database | 8.x |
-| **mysqli** | Database Driver | Built-in |
-| **PHPMailer** | Email Service | 6.x |
+| Technology    | Purpose              | Version  |
+| ------------- | -------------------- | -------- |
+| **PHP**       | Server-Side Language | 8.x      |
+| **MySQL**     | Relational Database  | 8.x      |
+| **mysqli**    | Database Driver      | Built-in |
+| **PHPMailer** | Email Service        | 6.x      |
 
 ### Development Tools
 
-| Tool | Purpose |
-|------|---------|
-| **Git** | Version Control |
-| **ESLint** | Code Linting |
-| **Prettier** | Code Formatting |
+| Tool           | Purpose                  |
+| -------------- | ------------------------ |
+| **Git**        | Version Control          |
+| **ESLint**     | Code Linting             |
+| **Prettier**   | Code Formatting          |
 | **WAMP/XAMPP** | Local Development Server |
-| **phpMyAdmin** | Database Administration |
-| **Postman** | API Testing |
-| **VSCode** | Code Editor |
+| **phpMyAdmin** | Database Administration  |
+| **Postman**    | API Testing              |
+| **VSCode**     | Code Editor              |
 
 ### Production Tools
 
-| Tool | Purpose |
-|------|---------|
-| **Netlify/Vercel** | Frontend Hosting |
-| **SSL/TLS** | Security Certificates |
-| **Google Analytics** | Usage Analytics |
-| **Sitemap/Robots.txt** | SEO Optimization |
+| Tool                   | Purpose               |
+| ---------------------- | --------------------- |
+| **Netlify/Vercel**     | Frontend Hosting      |
+| **SSL/TLS**            | Security Certificates |
+| **Google Analytics**   | Usage Analytics       |
+| **Sitemap/Robots.txt** | SEO Optimization      |
 
 ---
 
@@ -358,7 +373,7 @@ database/
 ### Data Flow
 
 ```
-User Input → Validation → React State → API Call → PHP Processing → 
+User Input → Validation → React State → API Call → PHP Processing →
 Database → Email Notification → Response → UI Update
 ```
 
@@ -421,6 +436,7 @@ pnpm install
    - Click "Go"
 
 **Alternative (Command Line):**
+
 ```bash
 mysql -u root -p
 CREATE DATABASE media_toolkit;
@@ -457,6 +473,7 @@ define('DEBUG_MODE', true);
 Visit: `http://localhost/media-toolkit-disaster-reporting/api/test-connection.php`
 
 Expected output:
+
 ```
 ✅ Database connection successful!
 ✅ Tables verified: resource_submissions, admin_users
@@ -491,11 +508,13 @@ The application will be available at: `http://localhost:5173`
 Submit a new resource for review.
 
 **Request Headers:**
+
 ```
 Content-Type: application/json
 ```
 
 **Request Body:**
+
 ```json
 {
   "name": "John Doe",
@@ -512,6 +531,7 @@ Content-Type: application/json
 ```
 
 **Validation Rules:**
+
 - 👤 `name`: Required, 3-255 characters
 - 📧 `email`: Required, valid email format
 - 🏢 `organization`: Optional, max 255 characters
@@ -524,6 +544,7 @@ Content-Type: application/json
 - ✅ `consent`: Required, must be true
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -533,6 +554,7 @@ Content-Type: application/json
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "success": false,
@@ -544,6 +566,7 @@ Content-Type: application/json
 ```
 
 **Error Response (500):**
+
 ```json
 {
   "success": false,
@@ -552,6 +575,7 @@ Content-Type: application/json
 ```
 
 **Features:**
+
 - Email validation (RFC 5322 compliant)
 - URL validation and sanitization
 - SQL injection prevention via prepared statements
@@ -565,10 +589,12 @@ Content-Type: application/json
 Admin panel for viewing and managing submissions.
 
 **Authentication:**
+
 - Basic HTTP authentication required
 - Credentials stored in `admin_users` table
 
 **Query Parameters:**
+
 - `status` - Filter by status: pending, approved, rejected
 - `type` - Filter by resource type
 - `search` - Search by keyword
@@ -576,12 +602,14 @@ Admin panel for viewing and managing submissions.
 - `offset` - Pagination offset
 
 **Example:**
+
 ```
 GET /api/view-submissions.php?status=pending&limit=20
 ```
 
 **Response:**
 HTML page with:
+
 - 📊 Submissions table
 - 🔍 Filtering controls
 - 📈 Statistics dashboard
@@ -608,7 +636,7 @@ CREATE TABLE resource_submissions (
     status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    
+
     INDEX idx_status (status),
     INDEX idx_type (resource_type),
     INDEX idx_email (email),
@@ -617,6 +645,7 @@ CREATE TABLE resource_submissions (
 ```
 
 **Indexes Rationale:**
+
 - `idx_status` - Fast filtering by submission status
 - `idx_type` - Quick resource type queries
 - `idx_email` - User submission history lookup
@@ -633,12 +662,13 @@ CREATE TABLE admin_users (
     role ENUM('admin', 'moderator') DEFAULT 'moderator',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_login TIMESTAMP NULL,
-    
+
     INDEX idx_username (username)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ```
 
 **Security Features:**
+
 - 🔐 Password hashing using bcrypt (cost factor 12)
 - 🔒 Unique username constraint
 - 👮 Role-based access control
@@ -878,15 +908,15 @@ Comprehensive learning materials and technical documentation:
 
 ### Available Documentation
 
-| Document | Topics Covered | Purpose |
-|----------|---------------|---------|
-| **PHP & RESTful APIs** | API design, routing, validation, security | Backend development |
-| **MySQL Connections** | Database connectivity, mysqli, PDO, connection pooling | Database integration |
-| **User Authentication** | Session management, password hashing, JWT, OAuth | Security implementation |
-| **SQL for Beginners** | CRUD operations, joins, indexes, optimization | Database fundamentals |
-| **Git & GitHub** | Version control, branching, collaboration, CI/CD | Development workflow |
-| **Deployment Guide** | Server setup, SSL, optimization, monitoring | Production deployment |
-| **Interview Prep** | Common questions, technical challenges, best practices | Job preparation |
+| Document                | Topics Covered                                         | Purpose                 |
+| ----------------------- | ------------------------------------------------------ | ----------------------- |
+| **PHP & RESTful APIs**  | API design, routing, validation, security              | Backend development     |
+| **MySQL Connections**   | Database connectivity, mysqli, PDO, connection pooling | Database integration    |
+| **User Authentication** | Session management, password hashing, JWT, OAuth       | Security implementation |
+| **SQL for Beginners**   | CRUD operations, joins, indexes, optimization          | Database fundamentals   |
+| **Git & GitHub**        | Version control, branching, collaboration, CI/CD       | Development workflow    |
+| **Deployment Guide**    | Server setup, SSL, optimization, monitoring            | Production deployment   |
+| **Interview Prep**      | Common questions, technical challenges, best practices | Job preparation         |
 
 ### Documentation Features
 
@@ -899,6 +929,7 @@ Comprehensive learning materials and technical documentation:
 - 🌍 Real-world scenarios
 
 **Ideal for:**
+
 - 💼 Job interview preparation
 - 📁 Portfolio presentations
 - 🎓 Technical skill development
@@ -925,6 +956,7 @@ netlify deploy --prod --dir=dist
 ```
 
 **Netlify Configuration** (`netlify.toml`):
+
 ```toml
 [build]
   command = "npm run build"
@@ -947,14 +979,13 @@ vercel --prod
 ```
 
 **Vercel Configuration** (`vercel.json`):
+
 ```json
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
 ```
 
@@ -1006,6 +1037,7 @@ sudo chmod -R 755 /var/www/media-toolkit
 ### Environment Configuration
 
 **Production `.env`:**
+
 ```env
 # Database
 DB_HOST=localhost
@@ -1033,6 +1065,7 @@ CSRF_PROTECTION=true
 ### Pre-Deployment Checklist
 
 **Frontend:**
+
 - [ ] Run production build successfully
 - [ ] Test all routes and pages
 - [ ] Verify responsive design on multiple devices
@@ -1043,6 +1076,7 @@ CSRF_PROTECTION=true
 - [ ] Check accessibility compliance
 
 **Backend:**
+
 - [ ] Database credentials configured
 - [ ] Email service tested
 - [ ] API endpoints respond correctly
@@ -1054,6 +1088,7 @@ CSRF_PROTECTION=true
 - [ ] SQL injection prevention verified
 
 **SEO & Performance:**
+
 - [ ] Sitemap.xml accessible
 - [ ] Robots.txt configured
 - [ ] Meta descriptions present
@@ -1069,6 +1104,7 @@ CSRF_PROTECTION=true
 ### Manual Testing Checklist
 
 **Functionality Testing:**
+
 - [ ] All 27 pages load without errors
 - [ ] Navigation menu works correctly
 - [ ] Language switching (EN ↔ AR)
@@ -1079,6 +1115,7 @@ CSRF_PROTECTION=true
 - [ ] AI chatbot responds appropriately
 
 **Cross-Browser Testing:**
+
 - [ ] Chrome (latest)
 - [ ] Firefox (latest)
 - [ ] Safari (latest)
@@ -1086,12 +1123,14 @@ CSRF_PROTECTION=true
 - [ ] Mobile browsers (iOS Safari, Chrome Mobile)
 
 **Responsive Design Testing:**
+
 - [ ] Desktop (1920x1080, 1366x768)
 - [ ] Tablet (768x1024, 1024x768)
 - [ ] Mobile (375x667, 414x896)
 - [ ] Large displays (2560x1440)
 
 **Performance Testing:**
+
 - [ ] Lighthouse score > 90
 - [ ] First Contentful Paint < 1.5s
 - [ ] Time to Interactive < 3s
@@ -1099,6 +1138,7 @@ CSRF_PROTECTION=true
 - [ ] Network requests optimized
 
 **Security Testing:**
+
 - [ ] SQL injection attempts blocked
 - [ ] XSS attempts sanitized
 - [ ] CSRF protection enabled
@@ -1130,17 +1170,20 @@ Contributions are welcome and appreciated! This project benefits from community 
 ### How to Contribute
 
 1. **Fork the Repository**
+
    ```bash
    # Click "Fork" on GitHub 🍴
    ```
 
 2. **Clone Your Fork**
+
    ```bash
    git clone https://github.com/your-username/media-toolkit-disaster-reporting.git
    cd media-toolkit-disaster-reporting
    ```
 
 3. **Create a Feature Branch**
+
    ```bash
    git checkout -b feature/amazing-feature
    ```
@@ -1157,12 +1200,14 @@ Contributions are welcome and appreciated! This project benefits from community 
    - 🚫 Ensure no breaking changes
 
 6. **Commit Your Changes**
+
    ```bash
    git add .
    git commit -m "Add: Brief description of your feature"
    ```
 
 7. **Push to Your Fork**
+
    ```bash
    git push origin feature/amazing-feature
    ```
@@ -1176,6 +1221,7 @@ Contributions are welcome and appreciated! This project benefits from community 
 ### Development Guidelines
 
 **Code Style:**
+
 - Use TypeScript for type safety
 - Follow React best practices
 - Use functional components and hooks
@@ -1183,6 +1229,7 @@ Contributions are welcome and appreciated! This project benefits from community 
 - Add JSDoc comments for complex functions
 
 **Commit Message Format:**
+
 ```
 Type: Brief description
 
@@ -1195,6 +1242,7 @@ Fixes #issue-number
 ```
 
 **Types:**
+
 - `Add:` New feature
 - `Fix:` Bug fix
 - `Update:` Modify existing feature
@@ -1206,6 +1254,7 @@ Fixes #issue-number
 - `Chore:` Maintenance tasks
 
 **Pull Request Guidelines:**
+
 - 🎯 Keep PRs focused on single feature/fix
 - 📸 Include screenshots for UI changes
 - 📚 Update documentation
@@ -1215,6 +1264,7 @@ Fixes #issue-number
 ### Areas for Contribution
 
 **High Priority:**
+
 - 🌍 Additional language translations (French, Spanish, Chinese)
 - ♿ Accessibility improvements (WCAG AAA compliance)
 - ⚡ Performance optimizations
@@ -1222,6 +1272,7 @@ Fixes #issue-number
 - 📊 Advanced analytics integration
 
 **Medium Priority:**
+
 - 🔧 Additional tool categories
 - 🔐 User authentication system
 - ⭐ Rating and review system
@@ -1229,6 +1280,7 @@ Fixes #issue-number
 - 📲 Progressive Web App features
 
 **Good First Issues:**
+
 - 📚 Documentation improvements
 - 🐛 Bug fixes
 - 🎨 UI/UX enhancements
@@ -1329,6 +1381,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 ### Frontend Development
 
 **React Ecosystem:**
+
 - ✅ React 18 with modern patterns (Hooks, Context, Suspense)
 - ✅ TypeScript for type-safe development and improved DX
 - ✅ Component-driven architecture with 60+ reusable components
@@ -1337,6 +1390,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Performance optimization (lazy loading, code splitting)
 
 **Styling & Design:**
+
 - ✅ Tailwind CSS utility-first approach
 - ✅ Responsive design (mobile-first methodology)
 - ✅ CSS Grid and Flexbox layouts
@@ -1345,6 +1399,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Accessibility standards (WCAG 2.1)
 
 **Internationalization:**
+
 - ✅ i18next framework integration
 - ✅ Dynamic language switching
 - ✅ RTL/LTR layout adaptation
@@ -1354,6 +1409,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ SEO optimization for both languages
 
 **API Integration:**
+
 - ✅ RESTful API consumption
 - ✅ Asynchronous data fetching
 - ✅ Error handling and retry logic
@@ -1363,6 +1419,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 ### Backend Development
 
 **PHP:**
+
 - ✅ Server-side programming with PHP 8
 - ✅ RESTful API design and implementation
 - ✅ Input validation and sanitization
@@ -1371,6 +1428,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Session management
 
 **Database:**
+
 - ✅ MySQL database design and normalization
 - ✅ Complex SQL queries (joins, subqueries, aggregations)
 - ✅ Prepared statements (SQL injection prevention)
@@ -1379,6 +1437,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Data integrity and constraints
 
 **Security:**
+
 - ✅ SQL injection prevention
 - ✅ XSS protection
 - ✅ CSRF protection implementation
@@ -1399,12 +1458,14 @@ This project showcases comprehensive full-stack development capabilities suitabl
 ### DevOps & Tools
 
 **Version Control:**
+
 - ✅ Git workflow (branching, merging, rebasing)
 - ✅ GitHub repository management
 - ✅ Commit message conventions
 - ✅ .gitignore best practices
 
 **Build & Development:**
+
 - ✅ Vite build tool configuration
 - ✅ Development environment setup
 - ✅ Hot module replacement
@@ -1412,6 +1473,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Environment variable management
 
 **Testing & QA:**
+
 - ✅ Manual testing procedures
 - ✅ Cross-browser testing
 - ✅ Responsive design testing
@@ -1419,6 +1481,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Database testing
 
 **Deployment:**
+
 - ✅ Deployment preparation
 - ✅ Server configuration
 - ✅ SSL/TLS setup understanding
@@ -1428,6 +1491,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 ### Software Engineering
 
 **Architecture:**
+
 - ✅ MVC pattern separation
 - ✅ Component-based architecture
 - ✅ Repository pattern implementation
@@ -1435,6 +1499,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Scalable project structure
 
 **Best Practices:**
+
 - ✅ Clean code principles
 - ✅ DRY (Don't Repeat Yourself)
 - ✅ SOLID principles
@@ -1443,6 +1508,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Performance optimization
 
 **Documentation:**
+
 - ✅ Comprehensive README
 - ✅ Technical documentation (7 guides)
 - ✅ Code comments and JSDoc
@@ -1462,6 +1528,7 @@ This project showcases comprehensive full-stack development capabilities suitabl
 - ✅ Accessibility compliance
 
 **Perfect for positions in:**
+
 - 💼 Full-Stack Developer
 - ⚛️ Frontend Developer (React/TypeScript)
 - 🐘 Backend Developer (PHP/MySQL)
@@ -1529,6 +1596,7 @@ For questions, suggestions, or collaboration opportunities, feel free to reach o
 ### Data Sources & Partners
 
 **Humanitarian Organizations:**
+
 - [UN OCHA ReliefWeb](https://reliefweb.int/) - Humanitarian information service
 - [World Health Organization (WHO)](https://www.who.int/) - Global health authority
 - [International Federation of Red Cross (IFRC)](https://www.ifrc.org/) - Humanitarian network
@@ -1540,6 +1608,7 @@ For questions, suggestions, or collaboration opportunities, feel free to reach o
 ### Technologies & Frameworks
 
 **Frontend:**
+
 - [React](https://react.dev/) - UI library
 - [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
 - [Vite](https://vitejs.dev/) - Next generation build tool
@@ -1547,11 +1616,13 @@ For questions, suggestions, or collaboration opportunities, feel free to reach o
 - [i18next](https://www.i18next.com/) - Internationalization framework
 
 **Backend:**
+
 - [PHP](https://www.php.net/) - Server-side scripting
 - [MySQL](https://www.mysql.com/) - Relational database
 - [Apache](https://httpd.apache.org/) - Web server
 
 **Tools & Libraries:**
+
 - [Lucide Icons](https://lucide.dev/) - Icon library
 - [Recharts](https://recharts.org/) - Charting library
 - [Wouter](https://github.com/molefrog/wouter) - Minimalist routing
@@ -1610,3 +1681,7 @@ This project was inspired by the critical need for accessible, reliable, and com
 **Last Updated:** February 14, 2026 📅  
 **Maintained By:** Ahmad Dakalbab 👨‍💻  
 **Project Status:** ✅ Active Development & Production Ready
+
+## Contributors
+
+- YOUR-USERNAME (practice contributor)
